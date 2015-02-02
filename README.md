@@ -7,5 +7,6 @@ Gruppen er bestående af følgende medlemmer:
   <li>Benjamin</li>
   <li>Henrik</li>
   <li>Jacob</li>
+  <li>Jari</li>
   <li>Daniel</li>
 </ul>
