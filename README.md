@@ -1,5 +1,5 @@
 # 1. årsprøve
-1. årsprøve på 2. semester - datamatiker-uddannelsen hos Erhvervsakademi Sjælland Campus Roskilde.
+Projektopgave for 1. årsprøve på 2. semester - datamatiker-uddannelsen hos Erhvervsakademi Sjælland Campus Roskilde.
 
 # Gruppemedlemmer
 Arbejdsgruppen er bestående af følgende medlemmer:
