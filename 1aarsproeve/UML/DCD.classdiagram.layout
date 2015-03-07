@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18.875, 10.875" name="DCD">
+  <logicalClassDesignerModelMoniker Id="5f834628-d4cf-455f-be70-798a01cbe8e7" />
+  <nestedChildShapes>
+    <packageShape Id="131ec3d5-1720-4ee2-a1dc-6a3b027aec60" absoluteBounds="1.75, 0.625, 10.875, 3.625" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="ff685324-9198-4f7f-a1eb-05ed1c021442" LastKnownName="View" />
+      <nestedChildShapes>
+        <classShape Id="dd07a795-9a2d-4752-817b-30aedb59aed8" absoluteBounds="2, 1.125, 2.25, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="711633ed-a2ff-4295-85ce-c63bfa331b08" LastKnownName="MainPage" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="f9295363-ca62-47d7-99b5-0372719c4dcc" absoluteBounds="2.015, 1.5150000000000001, 2.2199999999999998, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="50e21a0c-08f8-4c0c-a2cc-3fc5870a2491" absoluteBounds="2.015, 1.7261718675494193, 2.2199999999999998, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <packageShape Id="e4f93d51-7347-434c-8c85-acafecec8195" absoluteBounds="1.75, 4.5, 10.875, 2.875" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="be0d436c-61ca-415a-8dd1-e16feb5a96b5" LastKnownName="ViewModel" />
+    </packageShape>
+    <packageShape Id="fb36205a-2d0b-4dca-8e05-f2624e3787e5" absoluteBounds="1.75, 7.625, 10.875, 3" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="944ff3de-af37-4563-974b-45a6eafab098" LastKnownName="Model" />
+    </packageShape>
+    <packageShape Id="83d1ffdf-83ee-4c0f-9acd-f52cfbbdbffe" absoluteBounds="13, 4.75, 5.625, 2.625" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="ff14d250-c806-4810-a293-1d42ff456748" LastKnownName="Handler" />
+    </packageShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
