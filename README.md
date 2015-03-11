@@ -4,7 +4,6 @@ Projektopgave for 1. årsprøve på 2. semester - datamatiker-uddannelsen hos Er
 # Gruppemedlemmer
 Arbejdsgruppen er bestående af følgende medlemmer:
 * Benjamin
-* Henrik
 * Jacob
 * Jari
 * Daniel
