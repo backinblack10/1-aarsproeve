@@ -44,12 +44,24 @@
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagram.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="SystemSequenceDiagram.sequencediagram.layout">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UML.modelproj">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="UseCase.usecasediagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UseCase.usecasediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UseCase.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCaseDiagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCaseDiagram.usecasediagram.layout">
+      <SubType>Content</SubType>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="DCD.classdiagram">
