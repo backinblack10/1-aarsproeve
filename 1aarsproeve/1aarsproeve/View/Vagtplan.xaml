@@ -7,12 +7,23 @@
     xmlns:common="using:_1aarsproeve.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:_1aarsproeve.ViewModel"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <viewModel:MainViewModel/>
+    </Page.DataContext>
     <Page.Resources>
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <!-- TO DO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Vagtplan</x:String>
     </Page.Resources>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Calendar" Label="Alle vagter"/>
+            <AppBarButton Icon="Calendar" Label="Frie vagter"/>
+            <AppBarButton Icon="Calendar" Label="Mine vagter"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -37,13 +48,150 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
-                        Style="{StaticResource NavigationBackButtonNormalStyle}"
-                        VerticalAlignment="Top"
-                        AutomationProperties.Name="Back"
-                        AutomationProperties.AutomationId="BackButton"
-                        AutomationProperties.ItemType="Navigation Button"/>
+				Style="{StaticResource NavigationBackButtonNormalStyle}"
+				VerticalAlignment="Top"
+				AutomationProperties.Name="Back"
+				AutomationProperties.AutomationId="BackButton"
+				AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+        <Grid Margin="20,0,20,20" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="7*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="#FF658093" BorderBrush="White" Margin="0,5,5,5"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="15" TextWrapping="Wrap" Text="Mandag - 9. marts" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="15"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="25" TextWrapping="Wrap" Text="8:00 - 16:00" VerticalAlignment="Bottom" Padding="15" HorizontalAlignment="Center"/>
+
+            <Border BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" FontSize="15" TextWrapping="Wrap" Text="Tirsdag - 10. marts" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="15"/>
+            <TextBlock Grid.Column="1" Grid.Row="0" FontSize="25" TextWrapping="Wrap" Text="8:00 - 16:00" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="0" Grid.Column="2" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="2" Grid.Row="0" FontSize="15" TextWrapping="Wrap" Text="Onsdag - 11. marts" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="15"/>
+            <TextBlock Grid.Column="2" Grid.Row="0" FontSize="25" TextWrapping="Wrap" Text="8:00 - 16:00" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="0" Grid.Column="3" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="3" Grid.Row="0" FontSize="15" TextWrapping="Wrap" Text="Torsdag - 12. marts" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="15"/>
+            <TextBlock Grid.Column="3" Grid.Row="0" FontSize="25" TextWrapping="Wrap" Text="8:00 - 16:00" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="0" Grid.Column="4" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="4" Grid.Row="0" FontSize="15" TextWrapping="Wrap" Text="Fredag - 13. marts" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="15"/>
+            <TextBlock Grid.Column="4" Grid.Row="0" FontSize="25" TextWrapping="Wrap" Text="8:00 - 16:00" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="0" Grid.Column="5" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="5" Grid.Row="0" FontSize="15" TextWrapping="Wrap" Text="Lørdag - 14. marts" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="15"/>
+            <TextBlock Grid.Column="5" Grid.Row="0" FontSize="25" TextWrapping="Wrap" Text="8:00 - 16:00" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="15"/>
+
+            <Border BorderThickness="1,0" Grid.Row="0" Grid.Column="6" Background="#FF658093" BorderBrush="White" Margin="5,5,0,5" Padding="0"/>
+            <TextBlock Grid.Column="6" Grid.Row="0" FontSize="15" TextWrapping="Wrap" Text="Søndag - 15. marts" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="15"/>
+            <TextBlock Grid.Column="6" Grid.Row="0" FontSize="25" TextWrapping="Wrap" Text="8:00 - 16:00" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="15"/>
+
+            <ListView Grid.Row="1" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
+                <ListViewItem FontSize="20" Content="Daniel Winther"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Jacob Balling"/>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Jari Larsen"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Jari Larsen"/>
+                <ListViewItem FontSize="20" Content="Jacob Balling"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
+                <ListViewItem FontSize="20" Content="Daniel Jensen"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Daniel Winther"/>
+            </ListView>
+
+
+
+            <Border BorderThickness="1" Grid.Row="2" Grid.Column="0" Background="#FF658093" BorderBrush="White" Margin="0,5,5,5"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" FontSize="25" TextWrapping="Wrap" Text="16:00 - 22:00" VerticalAlignment="Center" Padding="15" HorizontalAlignment="Center"/>
+
+            <Border BorderThickness="1" Grid.Row="2" Grid.Column="1" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="1" Grid.Row="2" FontSize="25" TextWrapping="Wrap" Text="16:00 - 22:00" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="2" Grid.Column="2" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="2" Grid.Row="2" FontSize="25" TextWrapping="Wrap" Text="16:00 - 22:00" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="2" Grid.Column="3" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="3" Grid.Row="2" FontSize="25" TextWrapping="Wrap" Text="16:00 - 22:00" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="2" Grid.Column="4" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="4" Grid.Row="2" FontSize="25" TextWrapping="Wrap" Text="16:00 - 22:00" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15"/>
+
+            <Border BorderThickness="1" Grid.Row="2" Grid.Column="5" Background="#FF658093" BorderBrush="White" Margin="5"/>
+            <TextBlock Grid.Column="5" Grid.Row="2" FontSize="25" TextWrapping="Wrap" Text="16:00 - 22:00" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15"/>
+
+            <Border BorderThickness="1,0" Grid.Row="2" Grid.Column="6" Background="#FF658093" BorderBrush="White" Margin="5,5,0,5"/>
+            <TextBlock Grid.Column="6" Grid.Row="2" FontSize="25" TextWrapping="Wrap" Text="16:00 - 22:00" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15"/>
+
+            <ListView Grid.Row="3" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
+                <ListViewItem FontSize="20" Content="Daniel Winther"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="3" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Jacob Balling"/>
+            </ListView>
+
+            <ListView Grid.Row="3" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Jari Larsen"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="3" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Jari Larsen"/>
+                <ListViewItem FontSize="20" Content="Jacob Balling"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="3" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
+                <ListViewItem FontSize="20" Content="Daniel Jensen"/>
+                <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
+            </ListView>
+
+            <ListView Grid.Row="3" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
+            </ListView>
+
+            <ListView Grid.Row="3" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0">
+                <ListViewItem FontSize="20" Content="Daniel Winther"/>
+            </ListView>
         </Grid>
     </Grid>
 </Page>
