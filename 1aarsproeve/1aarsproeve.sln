@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1aarsproeve", "1aarsproeve\1aarsproeve.csproj", "{300F82AB-B836-4842-B973-8BC1AC1CA434}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "UML", "UML\UML.modelproj", "{85370104-ADCA-47B8-A5F4-A44673674B1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,16 @@ Global
 		{300F82AB-B836-4842-B973-8BC1AC1CA434}.Release|x86.ActiveCfg = Release|x86
 		{300F82AB-B836-4842-B973-8BC1AC1CA434}.Release|x86.Build.0 = Release|x86
 		{300F82AB-B836-4842-B973-8BC1AC1CA434}.Release|x86.Deploy.0 = Release|x86
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Release|ARM.ActiveCfg = Release|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Release|x64.ActiveCfg = Release|Any CPU
+		{85370104-ADCA-47B8-A5F4-A44673674B1A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
