@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="9dd97736-3636-4d41-a4d2-f43f9f7e9640">
+      <profileInstance Id="24b38ffc-af06-4f48-8fe0-e65dce5bb5f2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c3b6eaec-1522-490b-aa56-ebaf784460b3">
+      <profileInstance Id="176dbcf3-e8ea-4141-9509-a964f1bb7d7e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="eefe1b95-ce1b-4f9a-880d-5ffe86b45a1f" name="Bruger" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="82a6cbc4-25ee-46f4-b121-5638b877aa5a" />
+        <targetEnds>
+          <association Id="f8b995f8-f28f-4654-b0d8-8cdadd315109" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Logger ind på app" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8ef44920-62c5-4972-9db1-558aceca8f7f" LastKnownName="Logger ind på app" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94d6c5d4-efdd-4bf1-8c8c-484978962159" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e19869e2-4356-4194-8dd6-951c6a51b4be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="078bd51c-264b-41a3-8292-b30f5702236c" name="Logger ind på app" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="997f68a9-7bbc-4a6c-8dae-537657c4fb02" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="34bf2825-8637-4a18-86be-b80c81c011cb" />
+          </association>
+          <association Id="bc5a7c8e-728b-49aa-8659-9251ffedd778" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Læser fællesbeskeder" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3d61cade-4299-41b1-aaa6-7cc8fa5e13cb" LastKnownName="Læser fællesbeskeder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5e29b9b-a615-44d6-9f79-8ec5c3fa317c" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ec569f49-7bc9-4831-8e27-3e3ac677a21c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa40a9e5-ea0b-4334-828d-9784a162d1b6" name="Læser fællesbeskeder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8ab82dc1-89be-41fb-a29b-527d260e8baa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="49fa90ac-cf00-4c61-b4d3-8d960bd4515c" />
+          </association>
+          <association Id="afd2f803-8de7-4fac-b36f-0a98989c7b91" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Vælger egen profil" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7115ec03-e9e9-4850-9f71-7422a55a36ff" LastKnownName="Vælger egen profil" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea98997c-c405-43b3-9b12-6202443513cb" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ca784f92-5575-460e-802a-71ebea183961" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04797b65-67c6-4832-bf61-c428bf52f948" name="Vælger egen profil" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d248a1e-c1cd-47a4-8499-a66ed7492004" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d36d37a0-cbd2-48ba-9b9e-c67f22de0e21" />
+          </association>
+          <association Id="b4633a3a-ab81-4bfb-a501-548c4a92790b" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Vælger vagtplan " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="668576a0-5d5d-4400-a86f-387b98326af1" LastKnownName="Vælger vagtplan " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1eaefe05-f65a-48fc-92af-1ab7b7e7bee6" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8aa10f5a-6988-44a3-ac87-d2d9b1c786e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bac02c95-1ed3-48a3-bba1-cd5572ad9db5" name="Vælger vagtplan " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aa876a64-7a23-4f78-b20e-6b4e92666b7f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1fc81298-95d9-4171-91ff-a0c08a0abe65" />
+          </association>
+          <association Id="ee9ecaa2-0d52-4c81-97fe-bbac01cf5c79" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Vælger alle vagter" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d3a7a513-8b0a-4ce9-b7e8-636558ec65dc" LastKnownName="Vælger alle vagter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90d0a0f7-de29-42ab-be36-933bd017e7ac" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="86d3549b-c255-4717-8f46-f3eba6a7144a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="979904f6-a655-4569-9bd5-9cef5a2a2e0f" name="Vælger alle vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b2ce9eb5-a643-4f3a-b7ce-d1a66c41167b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="62e56a0d-cadd-47a4-a3e7-639820365f98" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="52b48e17-2df1-4a30-babe-64c4e3c24daf" name="Administrator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e3ad9fa1-8621-4556-ab1e-ea47d0e5bdbe" />
+        <targetEnds>
+          <association Id="07a082f1-5d1a-450f-8170-91155d7b4c9c" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Logger ind på app" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8ef44920-62c5-4972-9db1-558aceca8f7f" LastKnownName="Logger ind på app" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd7b01f6-62a0-47ec-93a2-b34f3d77deaa" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f08dfa15-1b9c-437e-b85a-69c5eb42726d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7f3445a-8933-41e2-b0c4-c91d93a565ba" name="Logger ind på app" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="424a5f6a-7b39-4352-a791-a7201238c442" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4cbbdab5-ef72-4dfe-b277-d1ab7a7fc614" />
+          </association>
+          <association Id="dca1e60e-42b3-46a4-a916-db2dfdd72d87" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Læser fællesbeskeder" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3d61cade-4299-41b1-aaa6-7cc8fa5e13cb" LastKnownName="Læser fællesbeskeder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81deddc5-ad3a-4c50-ac90-71bd581a1029" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6cc5d0c8-f05e-47d4-802a-871cbd6eeacb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="98bddad3-5c85-4be6-9309-692ffd85fcb5" name="Læser fællesbeskeder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="32ddf259-e8f5-495f-92c3-6017934c3574" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6865e70-95aa-4b74-ae1d-06193fb2b0dc" />
+          </association>
+          <association Id="dd0f5812-1f4d-4c97-ab1a-58cdafbfb257" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Vælger egen profil" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7115ec03-e9e9-4850-9f71-7422a55a36ff" LastKnownName="Vælger egen profil" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9baad22c-44b7-4697-8023-864b4960f485" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a1deff1a-ea9c-4c1b-a759-cad6ca15feb1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a541d4d-136d-4b68-9ace-fb706fcb51e9" name="Vælger egen profil" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cdd6dba1-21f9-4daa-9263-f7e4cd3bc1d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e21c3d34-cd5a-4d28-9501-f4fcb4ecaad1" />
+          </association>
+          <association Id="1ec0bce9-5f96-47c9-97f4-e39b6a68b5e2" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Vælger alle vagter" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d3a7a513-8b0a-4ce9-b7e8-636558ec65dc" LastKnownName="Vælger alle vagter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="18a18b91-acd2-4d83-a4df-6ef1ab681e6f" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="965c3f45-bf40-459b-9551-87f94aa9cd3a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="946521d8-4e51-4291-9024-030eb2f730ce" name="Vælger alle vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba921482-3a6a-4f62-be4d-e9bfc92bd1bd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ff0e98b0-67fa-4d5d-8428-e76513eee698" />
+          </association>
+          <association Id="3176944a-f6c5-495e-80a1-03ce323f4849" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Skrive fællesbeskeder" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2f0773e4-1de9-4251-912e-08115847f325" LastKnownName="Skrive fællesbeskeder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fc0e5408-8d35-4058-ab00-eee8e7bf14df" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1d27fa36-78b6-41c0-93bb-5630cae9a8bb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4df0e042-188a-44e6-b978-57ca835d21b7" name="Skrive fællesbeskeder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6500751a-bb9b-4b4a-9734-70b66354effc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="152a0a81-5faa-4a50-95e1-e4ce8a13c3de" />
+          </association>
+          <association Id="5becd1b3-5aae-4d20-9b61-882fda4f59f2" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Tilføj/fjern/rediger vagter" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e797a3aa-987b-4df4-b680-b20301b364f5" LastKnownName="Tilføj/fjern/rediger vagter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="846197d4-25b8-47d6-a6ad-6c111e252227" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ec3804c9-3b01-4ba1-b01c-2adf40a12015" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="67ebd7ba-5962-4a26-8e00-1ec1a3c1f0d2" name="Tilføj/fjern/rediger vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e7143c23-907c-4ab1-ada8-9f5a8e817e65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9a4256cb-3852-40a4-bf7a-534d92e2751f" />
+          </association>
+          <association Id="9b74ae7e-2f1a-4bfe-86d7-ca1bed0744fa" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Tilføj/fjern profil" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="417e3c64-7854-4ea1-85f6-edb533c76f51" LastKnownName="Tilføj/fjern profil" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59059f1d-f902-4043-949b-d3e12c857bcd" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1f2334c7-4138-4eb6-b3d4-7beeb1de177c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="43727a7f-4704-49b3-a66c-883a6341482a" name="Tilføj/fjern profil" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="614f2299-87ca-42fc-8d4f-2f4ca376ccc4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2b2a1607-12c7-419d-8c3e-21288ae956c7" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8ef44920-62c5-4972-9db1-558aceca8f7f" name="Logger ind på app" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e11bdd23-3c7f-4672-b40e-75f9141573ac" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3d61cade-4299-41b1-aaa6-7cc8fa5e13cb" name="Læser fællesbeskeder" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="64db2e4c-ed5f-4e5d-b249-749659623075" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7115ec03-e9e9-4850-9f71-7422a55a36ff" name="Vælger egen profil" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2bf72131-d951-4c37-8d18-770281aba08a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="668576a0-5d5d-4400-a86f-387b98326af1" name="Vælger vagtplan " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7c9dd53b-6e0e-43aa-89c0-8102de92fed0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d3a7a513-8b0a-4ce9-b7e8-636558ec65dc" name="Vælger alle vagter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="65fe9f78-0427-49e9-b90b-93fcda0177c7" />
+        <additions>
+          <include Id="e8eb38b6-42f0-4834-987c-0f2832e9813d">
+            <useCaseMoniker Id="563e4502-7d10-4bc4-93cd-6b30545abbed" LastKnownName="Vælger frie vagter" />
+            <elementDefinition Id="c6821942-8f3e-4f41-9710-34fd8b4cf4dd" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="563e4502-7d10-4bc4-93cd-6b30545abbed" name="Vælger frie vagter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d15939c1-2ff3-44b9-a64c-272eb9660b56" />
+        <additions>
+          <include Id="4e9835e8-25dc-43ba-b5de-a01f92d7df53">
+            <useCaseMoniker Id="4bfaf7d3-d73a-44d2-bc77-147bc13a9e7a" LastKnownName="Vælger mine vagter" />
+            <elementDefinition Id="4ba474bf-f7cd-41d1-aaa0-28bc2bdbadb3" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4bfaf7d3-d73a-44d2-bc77-147bc13a9e7a" name="Vælger mine vagter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2c14b17-72ba-4967-be5f-bcd577ef67f3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2f0773e4-1de9-4251-912e-08115847f325" name="Skrive fællesbeskeder" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="20766875-248e-4a10-bee1-61542eaeb9b2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e797a3aa-987b-4df4-b680-b20301b364f5" name="Tilføj/fjern/rediger vagter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b8c4508a-6f35-4318-9b94-71e47417a6ad" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="417e3c64-7854-4ea1-85f6-edb533c76f51" name="Tilføj/fjern profil" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3a999a4-2228-49a1-ac2a-b5bae47bb2e2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="bebf3999-b5f8-4ef9-837c-533690ac9cb3" name="UML">
+    <elementDefinition Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1" />
+  </package>
+</useCaseModelRoot>
