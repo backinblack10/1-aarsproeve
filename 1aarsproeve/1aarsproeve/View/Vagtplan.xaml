@@ -101,83 +101,82 @@
             <TextBlock Grid.Column="6" FontSize="40" TextWrapping="Wrap" Text="Søndag" Padding="0 15 0 0" Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="6" FontSize="25" TextWrapping="Wrap" Text="15. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
 
-            <ListView Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
-                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
-                <ListViewItem FontSize="20" Margin="0 -20 0 0" Content="7:00 - 16:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0" Content="Daniel Winther"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="8:00 - 17:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
+            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock FontSize="20" Text="{Binding Navn}"/>
+                            <TextBlock FontSize="20" Text="{Binding Tid}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
-                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
-                <ListViewItem FontSize="20" Margin="0 -20 0 0" Content="7:00 - 16:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0" Content="Daniel Winther"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="8:00 - 17:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
+            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock FontSize="20" Text="{Binding Navn}"/>
+                            <TextBlock FontSize="20" Text="{Binding Tid}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
-                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
-                <ListViewItem FontSize="20" Margin="0 -20 0 0" Content="7:00 - 16:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0" Content="Daniel Winther"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="8:00 - 17:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
+            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock FontSize="20" Text="{Binding Navn}"/>
+                            <TextBlock FontSize="20" Text="{Binding Tid}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
-                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
-                <ListViewItem FontSize="20" Margin="0 -20 0 0" Content="7:00 - 16:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0" Content="Daniel Winther"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="8:00 - 17:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
+            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock FontSize="20" Text="{Binding Navn}"/>
+                            <TextBlock FontSize="20" Text="{Binding Tid}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
-                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
-                <ListViewItem FontSize="20" Margin="0 -20 0 0" Content="7:00 - 16:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0" Content="Daniel Winther"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="8:00 - 17:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
+            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock FontSize="20" Text="{Binding Navn}"/>
+                            <TextBlock FontSize="20" Text="{Binding Tid}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
-                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
-                <ListViewItem FontSize="20" Margin="0 -20 0 0" Content="7:00 - 16:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0" Content="Daniel Winther"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="8:00 - 17:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
+            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock FontSize="20" Text="{Binding Navn}"/>
+                            <TextBlock FontSize="20" Text="{Binding Tid}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0">
-                <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
-                <ListViewItem FontSize="20" Margin="0 -20 0 0" Content="7:00 - 16:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0" Content="Daniel Winther"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="8:00 - 17:00"/>
-
-                <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
-                <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
+            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock FontSize="20" Text="{Binding Navn}"/>
+                            <TextBlock FontSize="20" Text="{Binding Tid}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
-
         </Grid>
     </Grid>
 </Page>
