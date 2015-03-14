@@ -73,35 +73,35 @@
             </Grid.RowDefinitions>
             <TextBlock FontSize="50" TextWrapping="Wrap" Text="{Binding Ugenummer}" Grid.Column="6" HorizontalAlignment="Right"/>
 
-            <Border BorderThickness="1" Grid.Column="0" Background="#FF658093" BorderBrush="White" Margin="0,5,5,5" Grid.Row="1"/>
-            <TextBlock Grid.Column="0" FontSize="35" TextWrapping="Wrap" Text="Mandag" Padding="0 15 0 0" Grid.Row="1" Margin="0,5,0,0" HorizontalAlignment="Center"/>
-            <!--<TextBlock Grid.Row="1" Grid.Column="0" FontSize="25" TextWrapping="Wrap" Text="9. marts" VerticalAlignment="Top" Padding="0" Margin="50,0" HorizontalAlignment="Center"/>-->
+            <Border BorderThickness="1" Grid.Column="0" Background="{Binding MandagFarve}" BorderBrush="White" Margin="0,5,5,5" Grid.Row="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="35" TextWrapping="Wrap" Text="Mandag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Grid.Column="0" FontSize="20" TextWrapping="Wrap" Text="{Binding Mandag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
 
-            <Border BorderThickness="1" Grid.Column="1" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Column="1" FontSize="35" TextWrapping="Wrap" Text="Tirsdag" Padding="0 15 0 0" Grid.Row="1" Margin="0,5,0,0" HorizontalAlignment="Center"/>
-            <!--<TextBlock Grid.Row="1" Grid.Column="1" FontSize="25" TextWrapping="Wrap" Text="10. marts" VerticalAlignment="Top" Padding="0" Margin="44,0" HorizontalAlignment="Center"/>-->
+            <Border BorderThickness="1" Grid.Column="1" Background="{Binding TirsdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="35" TextWrapping="Wrap" Text="Tirsdag" Padding="0" HorizontalAlignment="Center" Margin="39,5,38,0" Height="75" VerticalAlignment="Top"/>
+            <TextBlock Grid.Column="1" FontSize="20" TextWrapping="Wrap" Text="{Binding Tirsdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
 
-            <Border BorderThickness="1" Grid.Column="2" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Column="2" FontSize="35" TextWrapping="Wrap" Text="Onsdag" Padding="0 15 0 0" Grid.Row="1" Margin="0,5,0,0" HorizontalAlignment="Center"/>
-            <!--<TextBlock Grid.Row="1" Grid.Column="2" FontSize="25" TextWrapping="Wrap" Text="11. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
+            <Border BorderThickness="1" Grid.Column="2" Background="{Binding OnsdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="2" FontSize="35" TextWrapping="Wrap" Text="Onsdag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Grid.Column="2" FontSize="20" TextWrapping="Wrap" Text="{Binding Onsdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
 
-            <Border BorderThickness="1" Grid.Column="3" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Column="3" FontSize="35" TextWrapping="Wrap" Text="Torsdag" Padding="0 15 0 0" Grid.Row="1" Margin="0,5,0,0" HorizontalAlignment="Center"/>
-            <!--<TextBlock Grid.Row="1" Grid.Column="3" FontSize="25" TextWrapping="Wrap" Text="12. marts" VerticalAlignment="Top" Padding="0" Margin="44,0" HorizontalAlignment="Center"/>-->
+            <Border BorderThickness="1" Grid.Column="3" Background="{Binding TorsdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="3" FontSize="35" TextWrapping="Wrap" Text="Torsdag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Grid.Column="3" FontSize="20" TextWrapping="Wrap" Text="{Binding Torsdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
 
-            <Border BorderThickness="1" Grid.Column="4" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Column="4" FontSize="35" TextWrapping="Wrap" Text="Fredag" Padding="0 15 0 0" Grid.Row="1" Margin="0,5,0,0" HorizontalAlignment="Center"/>
-            <!--<TextBlock Grid.Row="1" Grid.Column="4" FontSize="25" TextWrapping="Wrap" Text="13. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
+            <Border BorderThickness="1" Grid.Column="4" Background="{Binding FredagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="4" FontSize="35" TextWrapping="Wrap" Text="Fredag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Grid.Column="4" FontSize="20" TextWrapping="Wrap" Text="{Binding Fredag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
 
-            <Border BorderThickness="1" Grid.Column="5" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Column="5" FontSize="35" TextWrapping="Wrap" Text="Lørdag" Padding="0 15 0 0" Grid.Row="1" Margin="0,5,0,0" HorizontalAlignment="Center"/>
-            <!--<TextBlock Grid.Row="1" Grid.Column="5" FontSize="25" TextWrapping="Wrap" Text="14. marts" VerticalAlignment="Top" Padding="0" Margin="44,0" HorizontalAlignment="Center"/>-->
+            <Border BorderThickness="1" Grid.Column="5" Background="{Binding LoerdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="5" FontSize="35" TextWrapping="Wrap" Text="Lørdag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Grid.Column="5" FontSize="20" TextWrapping="Wrap" Text="{Binding Loerdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
 
-            <Border BorderThickness="1" Grid.Column="6" Background="#FF658093" BorderBrush="White" Margin="5,5,0,5" Padding="0" Grid.Row="1"/>
-            <TextBlock Grid.Column="6" FontSize="35" TextWrapping="Wrap" Text="Søndag" Padding="0 15 0 0" Grid.Row="1" Margin="0,5,0,0" HorizontalAlignment="Center"/>
-            <!--<TextBlock Grid.Row="1" Grid.Column="6" FontSize="25" TextWrapping="Wrap" Text="15. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
+            <Border BorderThickness="1" Grid.Column="6" Background="{Binding SoendagFarve}" BorderBrush="White" Margin="5,5,0,5" Padding="0" Grid.Row="1"/>
+            <TextBlock Grid.Row="1" Grid.Column="6" FontSize="35" TextWrapping="Wrap" Text="Søndag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Grid.Column="6" FontSize="20" TextWrapping="Wrap" Text="{Binding Soendag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
 
-            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
+            <ListView ItemsSource="{Binding UgedageCollection[0].AnsatteListe}" Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
@@ -112,7 +112,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+            <ListView ItemsSource="{Binding UgedageCollection[1].AnsatteListe}" Grid.Row="2" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
@@ -123,7 +123,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+            <ListView ItemsSource="{Binding UgedageCollection[2].AnsatteListe}" Grid.Row="2" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
@@ -134,7 +134,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+            <ListView ItemsSource="{Binding UgedageCollection[3].AnsatteListe}" Grid.Row="2" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
@@ -145,7 +145,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+            <ListView ItemsSource="{Binding UgedageCollection[4].AnsatteListe}" Grid.Row="2" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
@@ -156,7 +156,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
+            <ListView ItemsSource="{Binding UgedageCollection[5].AnsatteListe}" Grid.Row="2" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
@@ -167,7 +167,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView ItemsSource="{Binding AnsatteCollection}" Grid.Row="2" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0">
+            <ListView ItemsSource="{Binding UgedageCollection[5].AnsatteListe}" Grid.Row="2" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,20">
