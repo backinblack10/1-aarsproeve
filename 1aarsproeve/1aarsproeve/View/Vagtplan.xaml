@@ -99,7 +99,7 @@
             <TextBlock Grid.Row="0" Grid.Column="6" FontSize="30" TextWrapping="Wrap" Text="Søndag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="44,0,43,0" Grid.RowSpan="2"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="6" FontSize="25" TextWrapping="Wrap" Text="15. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
 
-            <ListView Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0" Grid.RowSpan="2">
+            <ListView Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
                 <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
                 <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="7:00 - 16:00"/>
 
@@ -109,32 +109,32 @@
                 <ListViewItem FontSize="20" Margin="0,-20,0,0" Content="6:00 - 22:00"/>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0" Grid.RowSpan="2">
+            <ListView Grid.Row="2" Grid.Column="1" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListViewItem FontSize="20" Content="Jacob Balling"/>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0" Grid.RowSpan="2">
+            <ListView Grid.Row="2" Grid.Column="2" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListViewItem FontSize="20" Content="Jari Larsen"/>
                 <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0" Grid.RowSpan="2">
+            <ListView Grid.Row="2" Grid.Column="3" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListViewItem FontSize="20" Content="Jari Larsen"/>
                 <ListViewItem FontSize="20" Content="Jacob Balling"/>
                 <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0" Grid.RowSpan="2">
+            <ListView Grid.Row="2" Grid.Column="4" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
                 <ListViewItem FontSize="20" Content="Daniel Jensen"/>
                 <ListViewItem FontSize="20" Foreground="#FF747474" Content="Ubemandet"/>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0" Grid.RowSpan="2">
+            <ListView Grid.Row="2" Grid.Column="5" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,5,0" BorderThickness="1,0">
                 <ListViewItem FontSize="20" Content="Benjamin Jensen"/>
             </ListView>
 
-            <ListView Grid.Row="2" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0" Grid.RowSpan="2">
+            <ListView Grid.Row="2" Grid.Column="6" Padding="10 0 10 0" BorderBrush="White" Margin="5,15,0,0" BorderThickness="1,0">
                 <ListViewItem FontSize="20" Content="Daniel Winther"/>
             </ListView>
         </Grid>
