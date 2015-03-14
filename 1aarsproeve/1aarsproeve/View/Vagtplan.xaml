@@ -71,7 +71,10 @@
                 <RowDefinition Height="80"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock FontSize="50" TextWrapping="Wrap" Text="{Binding Ugenummer}" Grid.Column="6" HorizontalAlignment="Right"/>
+            <TextBlock FontSize="50" TextWrapping="Wrap" Grid.Column="6" HorizontalAlignment="Right">
+                <Run Text="Uge: "/>
+                <Run Text="{Binding Ugenummer}"/>
+            </TextBlock>
 
             <Border BorderThickness="1" Grid.Column="0" Background="{Binding MandagFarve}" BorderBrush="White" Margin="0,5,5,5" Grid.Row="1"/>
             <TextBlock Grid.Row="1" Grid.Column="0" FontSize="35" TextWrapping="Wrap" Text="Mandag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
