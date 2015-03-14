@@ -181,45 +181,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="62e56a0d-cadd-47a4-a3e7-639820365f98"
-            isDerived="false"
-            sourceEndRoleName="Bruger"
-            targetEndRoleName="Vælger alle vagter"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="65fe9f78-0427-49e9-b90b-93fcda0177c7"
-              LastKnownName="Vælger alle vagter"
-              LastKnownLocation="UML.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="86d3549b-c255-4717-8f46-f3eba6a7144a"
-                  name="Bruger"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="b2ce9eb5-a643-4f3a-b7ce-d1a66c41167b"
-                  name="Vælger alle vagter"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -348,45 +309,6 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="ff0e98b0-67fa-4d5d-8428-e76513eee698"
-            isDerived="false"
-            sourceEndRoleName="Administrator"
-            targetEndRoleName="Vælger alle vagter"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="65fe9f78-0427-49e9-b90b-93fcda0177c7"
-              LastKnownName="Vælger alle vagter"
-              LastKnownLocation="UML.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="965c3f45-bf40-459b-9551-87f94aa9cd3a"
-                  name="Administrator"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ba921482-3a6a-4f62-be4d-e9bfc92bd1bd"
-                  name="Vælger alle vagter"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="152a0a81-5faa-4a50-95e1-e4ce8a13c3de"
             isDerived="false"
             sourceEndRoleName="Administrator"
@@ -503,6 +425,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="3882094f-d083-4c24-9111-f4a04515745a"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Vælger vagtplan "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7c9dd53b-6e0e-43aa-89c0-8102de92fed0"
+              LastKnownName="Vælger vagtplan "
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="658e7354-d48f-4da2-83af-4a35af31b010"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3eafb97-9a3c-401e-b48a-b95dd60aa87e"
+                  name="Vælger vagtplan "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -532,34 +493,24 @@
         Id="7c9dd53b-6e0e-43aa-89c0-8102de92fed0"
         name="Vælger vagtplan "
         isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="65fe9f78-0427-49e9-b90b-93fcda0177c7"
-        name="Vælger alle vagter"
-        isAbstract="false"
         isLeaf="false">
         <additions>
           <include
-            Id="c6821942-8f3e-4f41-9710-34fd8b4cf4dd">
+            Id="c7ea8d73-d2ff-4bf1-a1a6-2d8c93c938b2">
             <useCaseMoniker
               Id="d15939c1-2ff3-44b9-a64c-272eb9660b56"
               LastKnownName="Vælger frie vagter"
               LastKnownLocation="UML.uml" />
           </include>
-        </additions>
-      </useCase>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <useCase
-        Id="d15939c1-2ff3-44b9-a64c-272eb9660b56"
-        name="Vælger frie vagter"
-        isAbstract="false"
-        isLeaf="false">
-        <additions>
           <include
-            Id="4ba474bf-f7cd-41d1-aaa0-28bc2bdbadb3">
+            Id="e58c38af-b003-4d90-99d7-88d4db52f4d5">
+            <useCaseMoniker
+              Id="65fe9f78-0427-49e9-b90b-93fcda0177c7"
+              LastKnownName="Vælger alle vagter"
+              LastKnownLocation="UML.uml" />
+          </include>
+          <include
+            Id="22d8644f-e0a8-4c5b-8052-5d16fe7abe61">
             <useCaseMoniker
               Id="f2c14b17-72ba-4967-be5f-bcd577ef67f3"
               LastKnownName="Vælger mine vagter"
@@ -567,6 +518,20 @@
           </include>
         </additions>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="65fe9f78-0427-49e9-b90b-93fcda0177c7"
+        name="Vælger alle vagter"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d15939c1-2ff3-44b9-a64c-272eb9660b56"
+        name="Vælger frie vagter"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
