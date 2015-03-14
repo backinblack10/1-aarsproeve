@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="9dd97736-3636-4d41-a4d2-f43f9f7e9640">
-      <profileInstance Id="24b38ffc-af06-4f48-8fe0-e65dce5bb5f2" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="c3b6eaec-1522-490b-aa56-ebaf784460b3">
-      <profileInstance Id="176dbcf3-e8ea-4141-9509-a964f1bb7d7e" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="eefe1b95-ce1b-4f9a-880d-5ffe86b45a1f" name="Bruger" isAbstract="false" isLeaf="false">
@@ -83,22 +69,6 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="1fc81298-95d9-4171-91ff-a0c08a0abe65" />
           </association>
-          <association Id="ee9ecaa2-0d52-4c81-97fe-bbac01cf5c79" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Vælger alle vagter" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="d3a7a513-8b0a-4ce9-b7e8-636558ec65dc" LastKnownName="Vælger alle vagter" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="90d0a0f7-de29-42ab-be36-933bd017e7ac" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="86d3549b-c255-4717-8f46-f3eba6a7144a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="979904f6-a655-4569-9bd5-9cef5a2a2e0f" name="Vælger alle vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="b2ce9eb5-a643-4f3a-b7ce-d1a66c41167b" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="62e56a0d-cadd-47a4-a3e7-639820365f98" />
-          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -154,22 +124,6 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="e21c3d34-cd5a-4d28-9501-f4fcb4ecaad1" />
           </association>
-          <association Id="1ec0bce9-5f96-47c9-97f4-e39b6a68b5e2" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Vælger alle vagter" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="d3a7a513-8b0a-4ce9-b7e8-636558ec65dc" LastKnownName="Vælger alle vagter" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="18a18b91-acd2-4d83-a4df-6ef1ab681e6f" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="965c3f45-bf40-459b-9551-87f94aa9cd3a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="946521d8-4e51-4291-9024-030eb2f730ce" name="Vælger alle vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="ba921482-3a6a-4f62-be4d-e9bfc92bd1bd" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="ff0e98b0-67fa-4d5d-8428-e76513eee698" />
-          </association>
           <association Id="3176944a-f6c5-495e-80a1-03ce323f4849" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Skrive fællesbeskeder" isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="2f0773e4-1de9-4251-912e-08115847f325" LastKnownName="Skrive fællesbeskeder" />
             <relationshipOwnedElementsInternal>
@@ -218,6 +172,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="2b2a1607-12c7-419d-8c3e-21288ae956c7" />
           </association>
+          <association Id="42bd6a99-df59-4fa4-981e-ddcf6b7bbee4" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Vælger vagtplan " isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="668576a0-5d5d-4400-a86f-387b98326af1" LastKnownName="Vælger vagtplan " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3685dade-1712-495a-ac6a-0d0a44964128" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="658e7354-d48f-4da2-83af-4a35af31b010" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6eef822e-9a77-40b3-84fa-b7dcafaecdf7" name="Vælger vagtplan " isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e3eafb97-9a3c-401e-b48a-b95dd60aa87e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3882094f-d083-4c24-9111-f4a04515745a" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -239,28 +209,30 @@
     <useCaseModelRootHasTypes>
       <useCase Id="668576a0-5d5d-4400-a86f-387b98326af1" name="Vælger vagtplan " isAbstract="false" isLeaf="false">
         <elementDefinition Id="7c9dd53b-6e0e-43aa-89c0-8102de92fed0" />
+        <additions>
+          <include Id="64923856-5b47-40b5-83fe-1a07e8d47fb3">
+            <useCaseMoniker Id="563e4502-7d10-4bc4-93cd-6b30545abbed" LastKnownName="Vælger frie vagter" />
+            <elementDefinition Id="c7ea8d73-d2ff-4bf1-a1a6-2d8c93c938b2" />
+          </include>
+          <include Id="2c7b63cf-eb49-4043-a193-d769a527d386">
+            <useCaseMoniker Id="d3a7a513-8b0a-4ce9-b7e8-636558ec65dc" LastKnownName="Vælger alle vagter" />
+            <elementDefinition Id="e58c38af-b003-4d90-99d7-88d4db52f4d5" />
+          </include>
+          <include Id="6ed20d20-f77b-4e5f-b076-6b1b9ff31f12">
+            <useCaseMoniker Id="4bfaf7d3-d73a-44d2-bc77-147bc13a9e7a" LastKnownName="Vælger mine vagter" />
+            <elementDefinition Id="22d8644f-e0a8-4c5b-8052-5d16fe7abe61" />
+          </include>
+        </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="d3a7a513-8b0a-4ce9-b7e8-636558ec65dc" name="Vælger alle vagter" isAbstract="false" isLeaf="false">
         <elementDefinition Id="65fe9f78-0427-49e9-b90b-93fcda0177c7" />
-        <additions>
-          <include Id="e8eb38b6-42f0-4834-987c-0f2832e9813d">
-            <useCaseMoniker Id="563e4502-7d10-4bc4-93cd-6b30545abbed" LastKnownName="Vælger frie vagter" />
-            <elementDefinition Id="c6821942-8f3e-4f41-9710-34fd8b4cf4dd" />
-          </include>
-        </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="563e4502-7d10-4bc4-93cd-6b30545abbed" name="Vælger frie vagter" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d15939c1-2ff3-44b9-a64c-272eb9660b56" />
-        <additions>
-          <include Id="4e9835e8-25dc-43ba-b5de-a01f92d7df53">
-            <useCaseMoniker Id="4bfaf7d3-d73a-44d2-bc77-147bc13a9e7a" LastKnownName="Vælger mine vagter" />
-            <elementDefinition Id="4ba474bf-f7cd-41d1-aaa0-28bc2bdbadb3" />
-          </include>
-        </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -286,5 +258,19 @@
   </packagedElements>
   <package Id="bebf3999-b5f8-4ef9-837c-533690ac9cb3" name="UML">
     <elementDefinition Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="9dd97736-3636-4d41-a4d2-f43f9f7e9640">
+        <profileInstance Id="24b38ffc-af06-4f48-8fe0-e65dce5bb5f2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c3b6eaec-1522-490b-aa56-ebaf784460b3">
+        <profileInstance Id="176dbcf3-e8ea-4141-9509-a964f1bb7d7e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
