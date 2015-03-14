@@ -53,7 +53,7 @@
 				AutomationProperties.Name="Back"
 				AutomationProperties.AutomationId="BackButton"
 				AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock x:Name="pageTitle" Text="Vagtplan" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
         <Grid Margin="20,0,20,20" Grid.Row="1">
@@ -67,36 +67,38 @@
                 <ColumnDefinition Width="7*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="475*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border BorderThickness="1" Grid.Row="0" Grid.Column="0" Background="#FF658093" BorderBrush="White" Margin="0,5,5,5" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="30" TextWrapping="Wrap" Text="Mandag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="40,0,39,0" Grid.RowSpan="2"/>
+            <TextBlock x:Name="week" Grid.Column="6" FontSize="50" TextWrapping="Wrap" Text="{Binding Ugenummer}" HorizontalAlignment="Right"/>
+
+            <Border BorderThickness="1" Grid.Column="0" Background="#FF658093" BorderBrush="White" Margin="0,5,5,5" Grid.Row="1"/>
+            <TextBlock Grid.Column="0" FontSize="40" TextWrapping="Wrap" Text="Mandag" Padding="0 15 0 0" Grid.Row="1" Margin="0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="0" FontSize="25" TextWrapping="Wrap" Text="9. marts" VerticalAlignment="Top" Padding="0" Margin="50,0" HorizontalAlignment="Center"/>-->
 
-            <Border BorderThickness="1" Grid.Row="0" Grid.Column="1" Background="#FF658093" BorderBrush="White" Margin="5" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="1" FontSize="30" TextWrapping="Wrap" Text="Tirsdag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="47,0,46,0" Grid.RowSpan="2"/>
+            <Border BorderThickness="1" Grid.Column="1" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Column="1" FontSize="40" TextWrapping="Wrap" Text="Tirsdag" Padding="0 15 0 0" Grid.Row="1" Margin="0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="1" FontSize="25" TextWrapping="Wrap" Text="10. marts" VerticalAlignment="Top" Padding="0" Margin="44,0" HorizontalAlignment="Center"/>-->
 
-            <Border BorderThickness="1" Grid.Row="0" Grid.Column="2" Background="#FF658093" BorderBrush="White" Margin="5" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="2" FontSize="30" TextWrapping="Wrap" Text="Onsdag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="43,0" Grid.RowSpan="2"/>
+            <Border BorderThickness="1" Grid.Column="2" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Column="2" FontSize="40" TextWrapping="Wrap" Text="Onsdag" Padding="0 15 0 0" Grid.Row="1" Margin="0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="2" FontSize="25" TextWrapping="Wrap" Text="11. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
 
-            <Border BorderThickness="1" Grid.Row="0" Grid.Column="3" Background="#FF658093" BorderBrush="White" Margin="5" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="3" FontSize="30" TextWrapping="Wrap" Text="Torsdag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="43,0,42,0" Grid.RowSpan="2"/>
+            <Border BorderThickness="1" Grid.Column="3" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Column="3" FontSize="40" TextWrapping="Wrap" Text="Torsdag" Padding="0 15 0 0" Grid.Row="1" Margin="0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="3" FontSize="25" TextWrapping="Wrap" Text="12. marts" VerticalAlignment="Top" Padding="0" Margin="44,0" HorizontalAlignment="Center"/>-->
 
-            <Border BorderThickness="1" Grid.Row="0" Grid.Column="4" Background="#FF658093" BorderBrush="White" Margin="5" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="4" FontSize="30" TextWrapping="Wrap" Text="Fredag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="49,0" Grid.RowSpan="2"/>
+            <Border BorderThickness="1" Grid.Column="4" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Column="4" FontSize="40" TextWrapping="Wrap" Text="Fredag" Padding="0 15 0 0" Grid.Row="1" Margin="0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="4" FontSize="25" TextWrapping="Wrap" Text="13. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
 
-            <Border BorderThickness="1" Grid.Row="0" Grid.Column="5" Background="#FF658093" BorderBrush="White" Margin="5" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="5" FontSize="30" TextWrapping="Wrap" Text="Lørdag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="49,0,48,0" Grid.RowSpan="2"/>
+            <Border BorderThickness="1" Grid.Column="5" Background="#FF658093" BorderBrush="White" Margin="5" Grid.Row="1"/>
+            <TextBlock Grid.Column="5" FontSize="40" TextWrapping="Wrap" Text="Lørdag" Padding="0 15 0 0" Grid.Row="1" Margin="0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="5" FontSize="25" TextWrapping="Wrap" Text="14. marts" VerticalAlignment="Top" Padding="0" Margin="44,0" HorizontalAlignment="Center"/>-->
 
-            <Border BorderThickness="1,0" Grid.Row="0" Grid.Column="6" Background="#FF658093" BorderBrush="White" Margin="5,5,0,5" Padding="0" Grid.RowSpan="2"/>
-            <TextBlock Grid.Row="0" Grid.Column="6" FontSize="30" TextWrapping="Wrap" Text="Søndag" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0 15 0 0" Margin="44,0,43,0" Grid.RowSpan="2"/>
+            <Border BorderThickness="1,0" Grid.Column="6" Background="#FF658093" BorderBrush="White" Margin="5,5,0,5" Padding="0" Grid.Row="1"/>
+            <TextBlock Grid.Column="6" FontSize="40" TextWrapping="Wrap" Text="Søndag" Padding="0 15 0 0" Grid.Row="1" Margin="0" HorizontalAlignment="Center"/>
             <!--<TextBlock Grid.Row="1" Grid.Column="6" FontSize="25" TextWrapping="Wrap" Text="15. marts" VerticalAlignment="Top" Padding="0" Margin="44,0,43,0" HorizontalAlignment="Center"/>-->
 
             <ListView Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
@@ -175,6 +177,7 @@
                 <ListViewItem FontSize="20" Margin="0 5 0 0"  Foreground="#FF747474" Content="Ubemandet"/>
                 <ListViewItem FontSize="20" Margin="0,-20,0,0" Foreground="#FF747474" Content="6:00 - 22:00"/>
             </ListView>
+
         </Grid>
     </Grid>
 </Page>
