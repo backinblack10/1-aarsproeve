@@ -46,70 +46,20 @@ namespace _1aarsproeve.ViewModel
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(100, 255, 255, 255)), new SolidColorBrush(Color.FromArgb(100, 162, 218, 255)));
 
             FindUgenummer("da-DK");
-            Mandag = FoersteDagPaaUge(Ugenummer).ToString("dd/MM-yyyy");
-            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("dd/MM-yyyy");
-            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("dd/MM-yyyy");
-            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("dd/MM-yyyy");
-            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("dd/MM-yyyy");
-            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("dd/MM-yyyy");
-            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("dd/MM-yyyy");
+            Mandag = FoersteDagPaaUge(Ugenummer).ToString("D", new CultureInfo("da-DK"));
+            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("D", new CultureInfo("da-DK"));
+            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("D", new CultureInfo("da-DK"));
+            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("D", new CultureInfo("da-DK"));
+            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("D", new CultureInfo("da-DK"));
+            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("D", new CultureInfo("da-DK"));
+            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("D", new CultureInfo("da-DK"));
+
+            InitialiserUgedage();
+            InitialiserAnsatte();
 
             AlleVagterCommand = new RelayCommand(AlleVagter);
             FrieVagterCommand = new RelayCommand(FrieVagter);
             MineVagterCommand = new RelayCommand(MineVagter);
-
-            #region Random genereret data
-            UgedageCollection = new ObservableCollection<Ugedage>()
-            {
-                new Ugedage {Ugedag = "Mandag", AnsatteListe = new List<Ansatte>()},
-                new Ugedage {Ugedag = "Tirsdag", AnsatteListe = new List<Ansatte>()},
-                new Ugedage {Ugedag = "Onsdag", AnsatteListe = new List<Ansatte>()},
-                new Ugedage {Ugedag = "Torsdag", AnsatteListe = new List<Ansatte>()},
-                new Ugedage {Ugedag = "Fredag", AnsatteListe = new List<Ansatte>()},
-                new Ugedage {Ugedag = "Lørdag", AnsatteListe = new List<Ansatte>()},
-                new Ugedage {Ugedag = "Søndag", AnsatteListe = new List<Ansatte>()},
-            };
-            Random r = new Random();
-            for (int i = 0; i < UgedageCollection.Count/2; i++)
-            {
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte
-                {
-                    Navn = "Daniel Winther",
-                    Tidspunkt = "16:00 - 22:30"
-                });
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte
-                {
-                    Navn = "Benjamin Jensen",
-                    Tidspunkt = "7:00 - 16:50"
-                });
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte
-                {
-                    Navn = "Jari Larsen",
-                    Tidspunkt = "8:30 - 17:30"
-                });
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte
-                {
-                    Navn = "Jacob Balling",
-                    Tidspunkt = "6:00 - 14:20"
-                });
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte
-                {
-                    Navn = "Peter Hansen",
-                    Tidspunkt = "10:00 - 18:00"
-                });
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte
-                {
-                    Navn = "Christian Johansen",
-                    Tidspunkt = "11:00 - 15:30"
-                });
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte
-                {
-                    Navn = "Ubemandet",
-                    Tidspunkt = "8:00 - 21:40"
-                });
-            }
-            #endregion
-
         }
         public void NuvaerendeUgedag(SolidColorBrush brush, SolidColorBrush brushOriginal)
         {
@@ -176,26 +126,126 @@ namespace _1aarsproeve.ViewModel
             var result = firstThursday.AddDays(weekNum * 7);
             return result.AddDays(-3);
         }
+
+        #region InitialiserUgedage
+        public void InitialiserUgedage()
+        {
+            UgedageCollection = new ObservableCollection<Ugedage>()
+            {
+                new Ugedage {Ugedag = "Mandag", AnsatteListe = new ObservableCollection<Ansatte>()},
+                new Ugedage {Ugedag = "Tirsdag", AnsatteListe = new ObservableCollection<Ansatte>()},
+                new Ugedage {Ugedag = "Onsdag", AnsatteListe = new ObservableCollection<Ansatte>()},
+                new Ugedage {Ugedag = "Torsdag", AnsatteListe = new ObservableCollection<Ansatte>()},
+                new Ugedage {Ugedag = "Fredag", AnsatteListe = new ObservableCollection<Ansatte>()},
+                new Ugedage {Ugedag = "Lørdag", AnsatteListe = new ObservableCollection<Ansatte>()},
+                new Ugedage {Ugedag = "Søndag", AnsatteListe = new ObservableCollection<Ansatte>()},
+            };
+        }
+        #endregion
+
+        #region InitialiserAnsatte
+        public void InitialiserAnsatte()
+        {
+            for (int i = 0; i < UgedageCollection.Count; i++)
+            {
+                UgedageCollection[i].AnsatteListe.Clear();
+
+                UgedageCollection[i].AnsatteListe.Add(new Ansatte
+                {
+                    Navn = "Daniel Winther",
+                    Tidspunkt = "16:30 - 20:30"
+                });
+                UgedageCollection[i].AnsatteListe.Add(new Ansatte
+                {
+                    Navn = "Benjamin Jensen",
+                    Tidspunkt = "07:00 - 16:50"
+                });
+                UgedageCollection[i].AnsatteListe.Add(new Ansatte
+                {
+                    Navn = "Jari Larsen",
+                    Tidspunkt = "08:30 - 17:30"
+                });
+                UgedageCollection[i].AnsatteListe.Add(new Ansatte
+                {
+                    Navn = "Jacob Balling",
+                    Tidspunkt = "06:00 - 14:20"
+                });
+                UgedageCollection[i].AnsatteListe.Add(new Ansatte
+                {
+                    Navn = "Ubemandet",
+                    Tidspunkt = "08:00 - 12:50"
+                });
+            }
+            UgedageCollection[0].AnsatteListe.Add(new Ansatte
+            {
+                Navn = "Daniel Winther",
+                Tidspunkt = "16:00 - 19:50"
+            });
+            UgedageCollection[4].AnsatteListe.Add(new Ansatte
+            {
+                Navn = "Ubemandet",
+                Tidspunkt = "15:00 - 18:10"
+            });
+            for (int i = 0; i < UgedageCollection.Count; i++)
+            {
+                var query =
+                    from u in UgedageCollection[i].AnsatteListe.ToList()
+                    orderby u.Tidspunkt, u.Navn ascending
+                    select u;
+                UgedageCollection[i].AnsatteListe.Clear();
+                foreach (var ansatte in query)
+                {
+                    UgedageCollection[i].AnsatteListe.Add(ansatte);
+                }
+            }
+        }
+        #endregion
+
         public void AlleVagter()
         {
-            UgedageCollection.Clear();
+            InitialiserAnsatte();
         }
         public void FrieVagter()
         {
-            UgedageCollection.Clear();
+            InitialiserAnsatte();
+            for (int i = 0; i < UgedageCollection.Count; i++)
+            {
+                var query =
+                    from u in UgedageCollection[i].AnsatteListe.ToList()
+                    where u.Navn == "Ubemandet"
+                    orderby u.Tidspunkt, u.Navn ascending 
+                    select u;
+                UgedageCollection[i].AnsatteListe.Clear();
+                foreach (var ansatte in query)
+                {
+                    UgedageCollection[i].AnsatteListe.Add(ansatte);
+                }
+            }
         }
-
         public void MineVagter()
         {
-            UgedageCollection.Clear();
+            InitialiserAnsatte();
+            for (int i = 0; i < UgedageCollection.Count; i++)
+            {
+                var query =
+                    from u in UgedageCollection[i].AnsatteListe.ToList()
+                    where u.Navn == "Daniel Winther"
+                    orderby u.Tidspunkt, u.Navn ascending 
+                    select u;
+                UgedageCollection[i].AnsatteListe.Clear();
+
+                foreach (var ansatte in query)
+                {
+                    UgedageCollection[i].AnsatteListe.Add(ansatte);
+                }
+            }
         }
     }
-
     #region Forsøgsklasser
     internal class Ugedage
     {
         public string Ugedag { get; set; }
-        public List<Ansatte> AnsatteListe { get; set; }
+        public ObservableCollection<Ansatte> AnsatteListe { get; set; }
     }
 
     internal class Ansatte

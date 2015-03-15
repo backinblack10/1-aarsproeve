@@ -56,10 +56,13 @@
 				AutomationProperties.Name="Back"
 				AutomationProperties.AutomationId="BackButton"
 				AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="Vagtplan" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+            <TextBlock x:Name="pageTitle" Style="{StaticResource HeaderTextBlockStyle}" Text="Vagtplan" Grid.Column="1" IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" HorizontalAlignment="Left"/>
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Grid.Row="0" Grid.Column="1" IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" HorizontalAlignment="Right">
+                <Run Text="Uge: " />
+                <Run Text="{Binding Ugenummer}"/>
+            </TextBlock>
         </Grid>
-        <Grid Margin="20,0,20,20" Grid.Row="1">
+        <Grid Margin="20,20,20,20" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>
                 <ColumnDefinition Width="7*"/>
@@ -70,42 +73,37 @@
                 <ColumnDefinition Width="7*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="80"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock FontSize="50" TextWrapping="Wrap" Grid.Column="6" HorizontalAlignment="Right">
-                <Run Text="Uge: "/>
-                <Run Text="{Binding Ugenummer}"/>
-            </TextBlock>
-
             <Border BorderThickness="1" Grid.Column="0" Background="{Binding MandagFarve}" BorderBrush="White" Margin="0,5,5,5" Grid.Row="1"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="35" TextWrapping="Wrap" Text="Mandag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Grid.Column="0" FontSize="20" TextWrapping="Wrap" Text="{Binding Mandag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="35" TextWrapping="Wrap" Text="Mandag" Padding="0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="0" FontSize="25" TextWrapping="Wrap" Text="{Binding Mandag}" Padding="0,1,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <Border BorderThickness="1" Grid.Column="1" Background="{Binding TirsdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="35" TextWrapping="Wrap" Text="Tirsdag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Grid.Column="1" FontSize="20" TextWrapping="Wrap" Text="{Binding Tirsdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            <TextBlock Grid.Column="1" FontSize="35" TextWrapping="Wrap" Text="Tirsdag" Padding="0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="1" FontSize="25" TextWrapping="Wrap" Text="{Binding Tirsdag}" Padding="0,1,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <Border BorderThickness="1" Grid.Column="2" Background="{Binding OnsdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Row="1" Grid.Column="2" FontSize="35" TextWrapping="Wrap" Text="Onsdag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Grid.Column="2" FontSize="20" TextWrapping="Wrap" Text="{Binding Onsdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            <TextBlock Grid.Column="2" FontSize="35" TextWrapping="Wrap" Text="Onsdag" Padding="0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="2" FontSize="25" TextWrapping="Wrap" Text="{Binding Onsdag}" Padding="0,1,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <Border BorderThickness="1" Grid.Column="3" Background="{Binding TorsdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Row="1" Grid.Column="3" FontSize="35" TextWrapping="Wrap" Text="Torsdag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Grid.Column="3" FontSize="20" TextWrapping="Wrap" Text="{Binding Torsdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            <TextBlock Grid.Column="3" FontSize="35" TextWrapping="Wrap" Text="Torsdag" Padding="0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="3" FontSize="25" TextWrapping="Wrap" Text="{Binding Torsdag}" Padding="0,1,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <Border BorderThickness="1" Grid.Column="4" Background="{Binding FredagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Row="1" Grid.Column="4" FontSize="35" TextWrapping="Wrap" Text="Fredag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Grid.Column="4" FontSize="20" TextWrapping="Wrap" Text="{Binding Fredag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            <TextBlock Grid.Column="4" FontSize="35" TextWrapping="Wrap" Text="Fredag" Padding="0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="4" FontSize="25" TextWrapping="Wrap" Text="{Binding Fredag}" Padding="0,1,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <Border BorderThickness="1" Grid.Column="5" Background="{Binding LoerdagFarve}" BorderBrush="White" Margin="5" Grid.Row="1"/>
-            <TextBlock Grid.Row="1" Grid.Column="5" FontSize="35" TextWrapping="Wrap" Text="Lørdag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Grid.Column="5" FontSize="20" TextWrapping="Wrap" Text="{Binding Loerdag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            <TextBlock Grid.Column="5" FontSize="35" TextWrapping="Wrap" Text="Lørdag" Padding="0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="5" FontSize="25" TextWrapping="Wrap" Text="{Binding Loerdag}" Padding="0,1,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <Border BorderThickness="1" Grid.Column="6" Background="{Binding SoendagFarve}" BorderBrush="White" Margin="5,5,0,5" Padding="0" Grid.Row="1"/>
-            <TextBlock Grid.Row="1" Grid.Column="6" FontSize="35" TextWrapping="Wrap" Text="Søndag" Padding="0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock Grid.Column="6" FontSize="20" TextWrapping="Wrap" Text="{Binding Soendag}" Padding="0 15 0 0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            <TextBlock Grid.Column="6" FontSize="35" TextWrapping="Wrap" Text="Søndag" Padding="0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="6" FontSize="25" TextWrapping="Wrap" Text="{Binding Soendag}" Padding="0,1,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <ListView ItemsSource="{Binding UgedageCollection[0].AnsatteListe}" Grid.Row="2" Grid.Column="0" Padding="10 0 10 0" BorderBrush="White" Margin="0,15,5,0" BorderThickness="1,0">
                 <ListView.ItemTemplate>
