@@ -85,19 +85,13 @@ namespace _1aarsproeve.ViewModel
             Ugenummer = "Uge: " + ugenummer;
 
             int aar = DateTime.Today.Year;
-            Mandag = FoersteDagPaaUge(aar, ugenummer).ToString("dd/MM-yyyy");
-            Tirsdag = FoersteDagPaaUge(aar, ugenummer).AddDays(1).ToString("dd/MM-yyyy");
-            Onsdag = FoersteDagPaaUge(aar, ugenummer).AddDays(2).ToString("dd/MM-yyyy");
-            Torsdag = FoersteDagPaaUge(aar, ugenummer).AddDays(3).ToString("dd/MM-yyyy");
-            Fredag = FoersteDagPaaUge(aar, ugenummer).AddDays(4).ToString("dd/MM-yyyy");
-            Loerdag = FoersteDagPaaUge(aar, ugenummer).AddDays(5).ToString("dd/MM-yyyy");
-            Soendag = SidsteDagPaaUge(aar, ugenummer).AddDays(6).ToString("dd/MM-yyyy");
-
-            /*if (DateTime.Now.ToString("dddd") == "Sunday")
-            {
-                MessageDialog m = new MessageDialog("fsdf");
-                m.ShowAsync();
-            }*/
+            Mandag = FoersteDagPaaUge(ugenummer).ToString("dd/MM-yyyy");
+            Tirsdag = FoersteDagPaaUge(ugenummer).AddDays(1).ToString("dd/MM-yyyy");
+            Onsdag = FoersteDagPaaUge(ugenummer).AddDays(2).ToString("dd/MM-yyyy");
+            Torsdag = FoersteDagPaaUge(ugenummer).AddDays(3).ToString("dd/MM-yyyy");
+            Fredag = FoersteDagPaaUge(ugenummer).AddDays(4).ToString("dd/MM-yyyy");
+            Loerdag = FoersteDagPaaUge(ugenummer).AddDays(5).ToString("dd/MM-yyyy");
+            Soendag = FoersteDagPaaUge(ugenummer).AddDays(6).ToString("dd/MM-yyyy");
 
             UgedageCollection = new ObservableCollection<Ugedage>()
             {
@@ -118,32 +112,14 @@ namespace _1aarsproeve.ViewModel
                 UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte { Navn = "Jari Larsen", Tidspunkt = "8:30 - 17:30" });
                 UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte { Navn = "Jacob Balling", Tidspunkt = "6:00 - 14:20" });
                 UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte { Navn = "Peter Hansen", Tidspunkt = "10:00 - 18:00" });
-                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte { Navn = "Mustafa Johansen", Tidspunkt = "11:00 - 15:30" });
+                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte { Navn = "Christian Johansen", Tidspunkt = "11:00 - 15:30" });
+                UgedageCollection[r.Next(0, UgedageCollection.Count)].AnsatteListe.Add(new Ansatte { Navn = "Ubemandet", Tidspunkt = "8:00 - 21:40" });
             }
         }
 
-        public static DateTime FoersteDagPaaUge(int year, int weekOfYear)
+        public static DateTime FoersteDagPaaUge(int weekOfYear)
         {
-            DateTime jan1 = new DateTime(year, 1, 1);
-            int daysOffset = DayOfWeek.Thursday - jan1.DayOfWeek;
-
-            DateTime firstThursday = jan1.AddDays(daysOffset);
-            var cal = CultureInfo.CurrentCulture.Calendar;
-            int firstWeek = cal.GetWeekOfYear(firstThursday, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-
-            var weekNum = weekOfYear;
-            if (firstWeek <= 1)
-            {
-                weekNum -= 1;
-            }
-            var result = firstThursday.AddDays(weekNum * 7);
-            return result.AddDays(-3);
-        }
-
-
-        public static DateTime SidsteDagPaaUge(int year, int weekOfYear)
-        {
-            DateTime jan1 = new DateTime(year, 1, 1);
+            DateTime jan1 = new DateTime(DateTime.Today.Year, 1, 1);
             int daysOffset = DayOfWeek.Thursday - jan1.DayOfWeek;
 
             DateTime firstThursday = jan1.AddDays(daysOffset);
