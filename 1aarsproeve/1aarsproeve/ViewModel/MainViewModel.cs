@@ -12,6 +12,7 @@ using Windows.UI.Popups;
 using Windows.UI.StartScreen;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using _1aarsproeve.Common;
 
 namespace _1aarsproeve.ViewModel
 {
@@ -36,12 +37,15 @@ namespace _1aarsproeve.ViewModel
         public string Soendag { get; set; }
         public ObservableCollection<Ugedage> UgedageCollection { get; set; }
 
+        public ICommand AlleVagterCommand { get; set; }
+        public ICommand FrieVagterCommand { get; set; }
+        public ICommand MineVagterCommand { get; set; }
+
         public MainViewModel()
         {
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(100, 255, 255, 255)), new SolidColorBrush(Color.FromArgb(100, 162, 218, 255)));
 
             FindUgenummer("da-DK");
-
             Mandag = FoersteDagPaaUge(Ugenummer).ToString("dd/MM-yyyy");
             Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("dd/MM-yyyy");
             Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("dd/MM-yyyy");
@@ -50,8 +54,11 @@ namespace _1aarsproeve.ViewModel
             Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("dd/MM-yyyy");
             Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("dd/MM-yyyy");
 
+            AlleVagterCommand = new RelayCommand(AlleVagter);
+            FrieVagterCommand = new RelayCommand(FrieVagter);
+            MineVagterCommand = new RelayCommand(MineVagter);
 
-            #region Random generet data
+            #region Random genereret data
             UgedageCollection = new ObservableCollection<Ugedage>()
             {
                 new Ugedage {Ugedag = "Mandag", AnsatteListe = new List<Ansatte>()},
@@ -102,9 +109,8 @@ namespace _1aarsproeve.ViewModel
                 });
             }
             #endregion
+
         }
-
-
         public void NuvaerendeUgedag(SolidColorBrush brush, SolidColorBrush brushOriginal)
         {
             if (MandagFarve == null || TirsdagFarve == null || OnsdagFarve == null || TorsdagFarve == null || FredagFarve == null || LoerdagFarve == null || SoendagFarve == null)
@@ -151,10 +157,9 @@ namespace _1aarsproeve.ViewModel
         public void FindUgenummer(string kulturInfo)
         {
             var kultur = CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(kulturInfo);
-            int ugenummer = kultur.Calendar.GetWeekOfYear(DateTime.Today, DateTimeFormatInfo.GetInstance(kultur).CalendarWeekRule, DateTimeFormatInfo.GetInstance(kultur).FirstDayOfWeek);
-            Ugenummer = ugenummer;
+            Ugenummer = kultur.Calendar.GetWeekOfYear(DateTime.Today, DateTimeFormatInfo.GetInstance(kultur).CalendarWeekRule, DateTimeFormatInfo.GetInstance(kultur).FirstDayOfWeek);
         }
-        public static DateTime FoersteDagPaaUge(int weekOfYear)
+        public DateTime FoersteDagPaaUge(int weekOfYear)
         {
             DateTime jan1 = new DateTime(DateTime.Today.Year, 1, 1);
             int daysOffset = DayOfWeek.Thursday - jan1.DayOfWeek;
@@ -170,6 +175,19 @@ namespace _1aarsproeve.ViewModel
             }
             var result = firstThursday.AddDays(weekNum * 7);
             return result.AddDays(-3);
+        }
+        public void AlleVagter()
+        {
+            UgedageCollection.Clear();
+        }
+        public void FrieVagter()
+        {
+            UgedageCollection.Clear();
+        }
+
+        public void MineVagter()
+        {
+            UgedageCollection.Clear();
         }
     }
 
