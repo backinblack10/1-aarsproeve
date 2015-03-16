@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.StartScreen;
@@ -18,6 +19,9 @@ namespace _1aarsproeve.ViewModel
 {
     class VagtplanViewModel
     {
+        public ApplicationDataContainer Setting { get; set; }
+        public string Brugernavn { get; set; }
+
         public Brush MandagFarve { get; set; }
         public Brush TirsdagFarve { get; set; }
         public Brush OnsdagFarve { get; set; }
@@ -43,6 +47,11 @@ namespace _1aarsproeve.ViewModel
 
         public VagtplanViewModel()
         {
+            Setting = ApplicationData.Current.LocalSettings;
+            Setting.Values["Brugernavn"] = "Daniel Winther";
+
+            Brugernavn = (string) Setting.Values["Brugernavn"];
+
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(100, 255, 255, 255)), new SolidColorBrush(Color.FromArgb(100, 162, 218, 255)));
 
             FindUgenummer("da-DK");
@@ -109,22 +118,21 @@ namespace _1aarsproeve.ViewModel
             var kultur = CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(kulturInfo);
             Ugenummer = kultur.Calendar.GetWeekOfYear(DateTime.Today, DateTimeFormatInfo.GetInstance(kultur).CalendarWeekRule, DateTimeFormatInfo.GetInstance(kultur).FirstDayOfWeek);
         }
-        public DateTime FoersteDagPaaUge(int weekOfYear)
+        public DateTime FoersteDagPaaUge(int ugePaaAaret)
         {
             DateTime jan1 = new DateTime(DateTime.Today.Year, 1, 1);
             int daysOffset = DayOfWeek.Thursday - jan1.DayOfWeek;
 
-            DateTime firstThursday = jan1.AddDays(daysOffset);
-            var cal = CultureInfo.CurrentCulture.Calendar;
-            int firstWeek = cal.GetWeekOfYear(firstThursday, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+            DateTime foersteTorsdag = jan1.AddDays(daysOffset);
+            int firstWeek = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(foersteTorsdag, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
 
-            var weekNum = weekOfYear;
+            var ugenummer = ugePaaAaret;
             if (firstWeek <= 1)
             {
-                weekNum -= 1;
+                ugenummer -= 1;
             }
-            var result = firstThursday.AddDays(weekNum * 7);
-            return result.AddDays(-3);
+            var resultat = foersteTorsdag.AddDays(ugenummer * 7);
+            return resultat.AddDays(-3);
         }
 
         #region InitialiserUgedage
@@ -229,7 +237,7 @@ namespace _1aarsproeve.ViewModel
             {
                 var query =
                     from u in UgedageCollection[i].AnsatteListe.ToList()
-                    where u.Navn == "Daniel Winther"
+                    where u.Navn == Brugernavn
                     orderby u.Tidspunkt, u.Navn ascending 
                     select u;
                 UgedageCollection[i].AnsatteListe.Clear();
