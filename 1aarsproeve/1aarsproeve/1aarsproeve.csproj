@@ -114,7 +114,7 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\VagtplanViewModel.cs" />
     <Compile Include="View\Hovedmenu.xaml.cs">
       <DependentUpon>Hovedmenu.xaml</DependentUpon>
     </Compile>
