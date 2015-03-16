@@ -16,7 +16,7 @@ using _1aarsproeve.Common;
 
 namespace _1aarsproeve.ViewModel
 {
-    class MainViewModel
+    class VagtplanViewModel
     {
         public Brush MandagFarve { get; set; }
         public Brush TirsdagFarve { get; set; }
@@ -41,7 +41,7 @@ namespace _1aarsproeve.ViewModel
         public ICommand FrieVagterCommand { get; set; }
         public ICommand MineVagterCommand { get; set; }
 
-        public MainViewModel()
+        public VagtplanViewModel()
         {
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(100, 255, 255, 255)), new SolidColorBrush(Color.FromArgb(100, 162, 218, 255)));
 
@@ -163,7 +163,7 @@ namespace _1aarsproeve.ViewModel
                 UgedageCollection[i].AnsatteListe.Add(new Ansatte
                 {
                     Navn = "Jari Larsen",
-                    Tidspunkt = "08:30 - 17:30"
+                    Tidspunkt = "16:00 - 19:50"
                 });
                 UgedageCollection[i].AnsatteListe.Add(new Ansatte
                 {
