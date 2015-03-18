@@ -52,7 +52,7 @@ namespace _1aarsproeve.ViewModel
 
             Brugernavn = (string) Setting.Values["Brugernavn"];
 
-            NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(100, 255, 255, 255)), new SolidColorBrush(Color.FromArgb(100, 162, 218, 255)));
+            NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
 
             FindUgenummer("da-DK");
             Mandag = FoersteDagPaaUge(Ugenummer).ToString("D", new CultureInfo("da-DK"));

@@ -106,6 +106,7 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Folder Include="Handler\" />
     <Folder Include="Model\" />
+    <Folder Include="Persistency\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -115,6 +116,9 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="ViewModel\HovedmenuViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\ProfilViewModel.cs" />
     <Compile Include="ViewModel\VagtplanViewModel.cs" />
     <Compile Include="View\Hovedmenu.xaml.cs">
       <DependentUpon>Hovedmenu.xaml</DependentUpon>
@@ -138,11 +142,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\bg.png" />
     <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\skrivbesked.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\profil.png" />
+    <Content Include="Assets\vagtplan.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
