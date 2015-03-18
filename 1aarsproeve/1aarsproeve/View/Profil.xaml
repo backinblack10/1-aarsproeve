@@ -14,7 +14,15 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Profil</x:String>
     </Page.Resources>
+    <Page.DataContext>
+        <ViewModel:ProfilViewModel/>
+    </Page.DataContext>
 
+    <Page.BottomAppBar>
+        <CommandBar Style="{StaticResource Bund}">
+            <AppBarButton Icon="Back" Label="Log ud"/>
+        </CommandBar>
+    </Page.BottomAppBar>
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
@@ -31,7 +39,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid>
+        <Grid Style="{StaticResource Top}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
@@ -48,6 +56,17 @@
                 <Run Text="Du er logget ind som: "/>
                 <Run Text="{Binding Brugernavn}" FontWeight="Bold"/>
             </TextBlock>
+        </Grid>
+        <Grid Margin="300 40" Grid.Row="1">
+            <StackPanel Margin="100 0">
+                <PasswordBox Style="{StaticResource GenerelPasswordbox}" PlaceholderText="Password"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="E-mail"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Adresse"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Postnummer"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="By"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Mobil"/>
+                <Button Style="{StaticResource GenerelButton}" Content="Gem profil"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

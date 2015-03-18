@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>DesignClassDiagram.classdiagram</DependentUpon>
     </Content>
+    <Content Include="DomainModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DomainModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DomainModel.classdiagram</DependentUpon>
+    </Content>
     <Content Include="SequenceDiagram.sequencediagram">
       <SubType>Content</SubType>
     </Content>
