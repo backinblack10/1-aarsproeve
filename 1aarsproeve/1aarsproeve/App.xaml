@@ -98,6 +98,8 @@
             <Setter Property="Background" Value="#FFB81323"/>
             <Setter Property="FontSize" Value="30"/>
         </Style>
+       
+
         <Style x:Key="GenerelCombobox" TargetType="ComboBox">
             <Setter Property="Background" Value="#FFDADADA"/>
             <Setter Property="Height" Value="50"/>

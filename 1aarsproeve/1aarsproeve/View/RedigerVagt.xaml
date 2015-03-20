@@ -15,7 +15,7 @@
         <x:String x:Key="AppName">Rediger vagt</x:String>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:ProfilViewModel/>
+        <ViewModel:ViewModel/>
     </Page.DataContext>
 
     <Page.BottomAppBar>
@@ -68,7 +68,7 @@
                     <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Sluttidspunkt" Grid.Column="1"/>
                 </Grid>
                 <ComboBox Style="{StaticResource GenerelCombobox}" PlaceholderText="Vælg ansat"/>
-                <Button Style="{StaticResource GenerelButton}" Content="Opret vagt"/>
+                <Button Style="{StaticResource GenerelButton}" Content="Rediger vagt"/>
             </StackPanel>
         </Grid>
     </Grid>

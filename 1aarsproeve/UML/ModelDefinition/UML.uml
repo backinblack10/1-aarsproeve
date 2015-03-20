@@ -1630,6 +1630,36 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6521a5fa-c1ad-45c4-ab51-83706a0245bd"
+        LastKnownName="View"
+        LastKnownLocation="Package_1205.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b2da44f7-40e8-45c5-974d-958870fdf62d"
+        LastKnownName="ViewModel"
+        LastKnownLocation="Package_1206.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fc1fbbe4-f3cb-4b3c-ac15-40880f9b6484"
+        LastKnownName="Model"
+        LastKnownLocation="Package_1207.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4fa66bd6-87be-4e33-97e6-233028a22311"
+        LastKnownName="Handler"
+        LastKnownLocation="Package_1208.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="009889cd-2e7d-40a7-ace1-2053c310869d"
+        LastKnownName="Persistency"
+        LastKnownLocation="Package1_1208.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

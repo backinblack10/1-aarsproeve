@@ -1,4 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DesignClassDiagram1">
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 25.375, 11.125" name="DesignClassDiagram1">
   <logicalClassDesignerModelMoniker Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" />
+  <nestedChildShapes>
+    <packageShape Id="17d9382c-139e-44af-8dcb-459c3bd68d33" absoluteBounds="3.25, 1.125, 10.75, 3.125" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="07392d45-5266-4b35-a375-9fb16f508317" LastKnownName="View" />
+    </packageShape>
+    <packageShape Id="63e378a6-a3b0-4fa9-ad1f-6a3b3d9e9bb2" absoluteBounds="3.25, 4.5, 10.75, 3.375" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="181ddaaf-94ec-42ca-9897-6fcb236ebf03" LastKnownName="ViewModel" />
+    </packageShape>
+    <packageShape Id="dfc14826-6902-4020-abf1-676bf4618eee" absoluteBounds="3.25, 8.25, 10.875, 2.625" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="90b76516-05b2-4199-8c03-0bec3bec7a23" LastKnownName="Model" />
+    </packageShape>
+    <packageShape Id="7e18b3f2-d7a6-4c21-9d7d-e598ae2b07b6" absoluteBounds="14.375, 4.75, 6, 3.125" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="4019e8ff-8729-4e45-a638-1c752a4c2152" LastKnownName="Handler" />
+    </packageShape>
+    <packageShape Id="407dc2f2-2c6c-4285-98e0-65e3ad6fd094" absoluteBounds="20.875, 5, 4.25, 2.875" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="49b24c90-6057-40ef-8941-67cc07853f76" LastKnownName="Persistency" />
+    </packageShape>
+  </nestedChildShapes>
 </logicalClassDesignerDiagram>

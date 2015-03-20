@@ -11,13 +11,15 @@ using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.StartScreen;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using _1aarsproeve.Common;
+using _1aarsproeve.View;
 
 namespace _1aarsproeve.ViewModel
 {
-    class VagtplanViewModel
+    class ViewModel
     {
         public ApplicationDataContainer Setting { get; set; }
         public string Brugernavn { get; set; }
@@ -44,8 +46,9 @@ namespace _1aarsproeve.ViewModel
         public ICommand AlleVagterCommand { get; set; }
         public ICommand FrieVagterCommand { get; set; }
         public ICommand MineVagterCommand { get; set; }
+        public ICommand LogUdCommand { get; set; }
 
-        public VagtplanViewModel()
+        public ViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
             Setting.Values["Brugernavn"] = "Daniel Winther";
@@ -69,6 +72,7 @@ namespace _1aarsproeve.ViewModel
             AlleVagterCommand = new RelayCommand(AlleVagter);
             FrieVagterCommand = new RelayCommand(FrieVagter);
             MineVagterCommand = new RelayCommand(MineVagter);
+            LogUdCommand = new RelayCommand(LogUd);
         }
         public void NuvaerendeUgedag(SolidColorBrush brush, SolidColorBrush brushOriginal)
         {
@@ -247,6 +251,14 @@ namespace _1aarsproeve.ViewModel
                     UgedageCollection[i].AnsatteListe.Add(ansatte);
                 }
             }
+        }
+
+        public void LogUd()
+        {
+            Setting.Values.Remove("Brugernavn");
+
+            var rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(Login));
         }
     }
     #region Forsøgsklasser

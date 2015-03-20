@@ -58,7 +58,7 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Style="{StaticResource GenerelButton}" Content="Login"/>
+                    <Button Style="{StaticResource GenerelButton}" Command="{Binding LogIndCommand}" Content="Login"/>
                     <Button Style="{StaticResource GenerelButton}" Content="Glemt password" Grid.Column="1"/>
                 </Grid>
             </StackPanel>

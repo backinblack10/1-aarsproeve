@@ -17,14 +17,26 @@
     </Page.Resources>
 
     <Page.DataContext>
-        <viewModel:VagtplanViewModel/>
+        <viewModel:ViewModel/>
     </Page.DataContext> 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Icon="Delete" Label="Slet vagt"/>
-                <AppBarButton Icon="Edit" Label="Rediger vagt"/>
-                <AppBarButton Icon="Add" Label="Opret vagt"/>
+                <AppBarButton Icon="Edit" Label="Rediger vagt">
+                	<Interactivity:Interaction.Behaviors>
+                		<Core:EventTriggerBehavior EventName="Click">
+                			<Core:NavigateToPageAction TargetPage="_1aarsproeve.View.RedigerVagt"/>
+                		</Core:EventTriggerBehavior>
+                	</Interactivity:Interaction.Behaviors>
+                </AppBarButton>
+                <AppBarButton Icon="Add" Label="Opret vagt">
+                	<Interactivity:Interaction.Behaviors>
+                		<Core:EventTriggerBehavior EventName="Click">
+                			<Core:NavigateToPageAction TargetPage="_1aarsproeve.View.OpretVagt"/>
+                		</Core:EventTriggerBehavior>
+                	</Interactivity:Interaction.Behaviors>
+                </AppBarButton>
             </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Calendar" Label="Alle vagter" Command="{Binding AlleVagterCommand}"/>
             <AppBarButton Icon="Calendar" Label="Frie vagter" Command="{Binding FrieVagterCommand}"/>
