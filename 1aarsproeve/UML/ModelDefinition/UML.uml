@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -171,6 +171,45 @@
                 <memberEnd
                   Id="aa876a64-7a23-4f78-b20e-6b4e92666b7f"
                   name="Vælger vagtplan "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bf93b260-a921-4470-b596-7299d27e9be7"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Logger ud på app"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bbfe0116-dfe0-4957-9ef3-d892b01b3f1f"
+              LastKnownName="Logger ud på app"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7c5cd6d3-04a5-4162-b318-6974939a9c67"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ccd3155e-43ec-405b-904c-272e938ace7a"
+                  name="Logger ud på app"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -464,6 +503,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="eae44551-d756-441d-a552-0e1f5f28d02a"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Logger ud på app"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bbfe0116-dfe0-4957-9ef3-d892b01b3f1f"
+              LastKnownName="Logger ud på app"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98dae926-b1ca-4fbc-b520-c86bae068ec3"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5d60defd-75c6-476f-b3fa-04048f11a671"
+                  name="Logger ud på app"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -610,7 +688,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="3139d9a5-0907-45db-948e-53f18bfff8e7"
+            Id="f0870e67-1360-474c-b37a-ce5c2a268921"
             isDerived="false"
             sourceEndRoleName="Ansatte"
             targetEndRoleName="Vagter"
@@ -623,7 +701,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="0425e414-a9d5-4a0c-97bc-33f036fd82ef"
+                  Id="0821e8d3-23be-423f-bde1-b786a93f1deb"
                   name="Ansatte"
                   isLeaf="false"
                   isStatic="false"
@@ -636,7 +714,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="74ec967a-9aff-4ea8-ace1-dce4c03a65b8"
+                  Id="beb873fd-5549-4c98-a151-82e51c136356"
                   name="Vagter"
                   isLeaf="false"
                   isStatic="false"
@@ -648,13 +726,66 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="028610e4-8440-4aea-a9ab-7eea9ae3e771"
+                      Id="aa877dc2-a7ad-42f8-8b62-997baf770013"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="b21cd8de-0955-44f7-a0f7-90d470da5c8f"
+                      Id="f5ce64be-2ace-4ae6-bf47-4cd7c69cd9bb"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b8ca28a7-b27d-4d5c-be67-729c1cb50cdc"
+            isDerived="false"
+            sourceEndRoleName="Ansatte"
+            targetEndRoleName="Beskeder"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c2023d09-4b65-4495-9875-a1e4e75d1615"
+              LastKnownName="Beskeder"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e6e3611a-fecc-41db-99b3-d338913e27e1"
+                  name="Ansatte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5223d502-98ed-48ce-9e77-1897559f1d61"
+                  name="Beskeder"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f01e4ffc-3a63-422b-90ed-dbc12740145e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f78c5788-0784-41fc-a336-8b64c253267f"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -883,61 +1014,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="9550fb03-31c5-46b2-8c0f-08b5683cfa6e"
-            isDerived="false"
-            sourceEndRoleName="Beskeder"
-            targetEndRoleName="Ansatte"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="616d91b8-0e27-4df6-bb9a-ba1a9e80b110"
-              LastKnownName="Ansatte"
-              LastKnownLocation="UML.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="50762856-08a1-4a2e-aaa9-ba2709dd40e3"
-                  name="Beskeder"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="54f073f1-5a34-4e49-abd1-1cecf90ff484"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="251f8099-ecd1-48ab-9d79-4b973139b0ec"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6098a28a-9964-45fd-9e11-d61a8a048749"
-                  name="Ansatte"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="b88e9cf0-742a-4fdc-afe1-06268a0dc903"
@@ -1546,6 +1622,13 @@
       <executionEvent
         Id="3b0fbb40-1970-4d61-a699-4aa671eba78f"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bbfe0116-dfe0-4957-9ef3-d892b01b3f1f"
+        name="Logger ud på app"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

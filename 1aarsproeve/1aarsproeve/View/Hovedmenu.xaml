@@ -92,12 +92,22 @@
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/skrivbesked.png"/>
                     </Button.Background>
+                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.SkrivBesked"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
                 </Button>
 
-                <Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret vagt" >
+                <Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret bruger" >
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/skrivbesked.png"/>
                     </Button.Background>
+                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.OpretBruger"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
                 </Button>
             </Grid>
 
