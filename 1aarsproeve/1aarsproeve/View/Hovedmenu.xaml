@@ -68,7 +68,7 @@
 					<RowDefinition Height="310"/>
 					<RowDefinition Height="1*"/>
 				</Grid.RowDefinitions>
-				<Button Style="{StaticResource HovedmenuButton}">
+				<Button Style="{StaticResource HovedmenuButton}" ToolTipService.ToolTip="Vis vagtplan">
                     <Button.Background>
                         <ImageBrush ImageSource="ms-appx:///Assets/vagtplan.png"/>
                     </Button.Background>
@@ -78,7 +78,7 @@
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </Button>
-				<Button Style="{StaticResource HovedmenuButton}" Grid.Column="1"  >
+				<Button Style="{StaticResource HovedmenuButton}" Grid.Column="1" ToolTipService.ToolTip="Rediger profil"  >
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/profil.png"/>
                     </Button.Background>
@@ -88,7 +88,13 @@
 						</Core:EventTriggerBehavior>
 					</Interactivity:Interaction.Behaviors>
 				</Button>
-				<Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" >
+				<Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" ToolTipService.ToolTip="Skriv fællesbesked" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/skrivbesked.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret vagt" >
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/skrivbesked.png"/>
                     </Button.Background>
