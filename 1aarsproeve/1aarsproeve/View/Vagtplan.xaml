@@ -18,9 +18,13 @@
 
     <Page.DataContext>
         <viewModel:VagtplanViewModel/>
-    </Page.DataContext>
+    </Page.DataContext> 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Delete" Label="Slet vagt"/>
+                <AppBarButton Icon="Edit" Label="Rediger vagt"/>
+            </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Calendar" Label="Alle vagter" Command="{Binding AlleVagterCommand}"/>
             <AppBarButton Icon="Calendar" Label="Frie vagter" Command="{Binding FrieVagterCommand}"/>
             <AppBarButton Icon="Calendar" Label="Mine vagter" Command="{Binding MineVagterCommand}"/>
