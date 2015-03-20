@@ -96,6 +96,12 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="Background" Value="#FFB81323"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+        <Style x:Key="GenerelCombobox" TargetType="ComboBox">
+            <Setter Property="Background" Value="#FFDADADA"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="0 0 0 10"/>
         </Style>
 
         <Style x:Key="Bund" TargetType="CommandBar">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="eefe1b95-ce1b-4f9a-880d-5ffe86b45a1f" name="Bruger" isAbstract="false" isLeaf="false">
@@ -68,6 +68,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="1fc81298-95d9-4171-91ff-a0c08a0abe65" />
+          </association>
+          <association Id="f7f7863e-305b-46c2-bc0b-7562c69d2ddb" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Logger ud på app" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="75447552-c088-463f-a96f-12b6cfd1e20e" LastKnownName="Logger ud på app" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="89c3b273-2f21-4075-96a8-7e7cc310da56" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7c5cd6d3-04a5-4162-b318-6974939a9c67" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="408ef5db-5b00-4b8e-b100-deef86f23b41" name="Logger ud på app" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ccd3155e-43ec-405b-904c-272e938ace7a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bf93b260-a921-4470-b596-7299d27e9be7" />
           </association>
         </targetEnds>
       </actor>
@@ -188,6 +204,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="3882094f-d083-4c24-9111-f4a04515745a" />
           </association>
+          <association Id="fd3eb68a-861e-479c-a29e-39b54ae5eb2c" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Logger ud på app" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="75447552-c088-463f-a96f-12b6cfd1e20e" LastKnownName="Logger ud på app" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d32ae418-1843-43d0-81df-7b02b39fe783" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="98dae926-b1ca-4fbc-b520-c86bae068ec3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="01a0bd78-b8d6-4afd-adaa-b464cb72686a" name="Logger ud på app" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d60defd-75c6-476f-b3fa-04048f11a671" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="eae44551-d756-441d-a552-0e1f5f28d02a" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -253,6 +285,11 @@
     <useCaseModelRootHasTypes>
       <useCase Id="417e3c64-7854-4ea1-85f6-edb533c76f51" name="Tilføj/fjern profil" isAbstract="false" isLeaf="false">
         <elementDefinition Id="c3a999a4-2228-49a1-ac2a-b5bae47bb2e2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="75447552-c088-463f-a96f-12b6cfd1e20e" name="Logger ud på app" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bbfe0116-dfe0-4957-9ef3-d892b01b3f1f" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

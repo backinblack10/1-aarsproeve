@@ -13,7 +13,7 @@
 
     <Page.Resources>
         <!-- TO DO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Vagtplan - uge 11</x:String>
+        <x:String x:Key="AppName">Vagtplan</x:String>
     </Page.Resources>
 
     <Page.DataContext>
@@ -24,6 +24,7 @@
             <CommandBar.SecondaryCommands>
                 <AppBarButton Icon="Delete" Label="Slet vagt"/>
                 <AppBarButton Icon="Edit" Label="Rediger vagt"/>
+                <AppBarButton Icon="Add" Label="Opret vagt"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Calendar" Label="Alle vagter" Command="{Binding AlleVagterCommand}"/>
             <AppBarButton Icon="Calendar" Label="Frie vagter" Command="{Binding FrieVagterCommand}"/>
