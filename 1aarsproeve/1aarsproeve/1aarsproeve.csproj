@@ -160,7 +160,6 @@
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\profil.png" />
     <Content Include="Assets\vagtplan.png" />
-    <Content Include="opretbruger.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
