@@ -41,6 +41,7 @@
             <AppBarButton Icon="Calendar" Label="Alle vagter" Command="{Binding AlleVagterCommand}"/>
             <AppBarButton Icon="Calendar" Label="Frie vagter" Command="{Binding FrieVagterCommand}"/>
             <AppBarButton Icon="Calendar" Label="Mine vagter" Command="{Binding MineVagterCommand}"/>
+            <AppBarButton Icon="Back" Label="Log ud" Command="{Binding LogUdCommand}"/>
         </CommandBar>
     </Page.BottomAppBar>
 

@@ -65,7 +65,7 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="310"/>
+                    <RowDefinition Height="260"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Button Style="{StaticResource HovedmenuButton}" ToolTipService.ToolTip="Vis vagtplan">
@@ -116,7 +116,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBlock Style="{StaticResource BeskederText}" Text="Seneste fællesbeskeder"/>
+                <TextBlock Style="{StaticResource BeskederText}" Text="Fællesbeskeder"/>
                 <ListView ItemsSource="{Binding BeskedCollection}" Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>

@@ -20,7 +20,7 @@
 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
-            <AppBarButton Icon="Back" Label="Log ud"/>
+            <AppBarButton Icon="Back" Label="Log ud" Command="{Binding LogUdCommand}"/>
         </CommandBar>
     </Page.BottomAppBar>
     <!--

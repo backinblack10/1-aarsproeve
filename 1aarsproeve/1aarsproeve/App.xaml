@@ -59,8 +59,8 @@
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="Background" Value="#FFB81323"/>
-            <Setter Property="Width" Value="300"/>
-            <Setter Property="Height" Value="300"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="250"/>
         </Style>
         <Style x:Key="BeskederText" TargetType="TextBlock">
             <Setter Property="FontSize" Value="55"/>
@@ -96,7 +96,7 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="Background" Value="#FFB81323"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="15"/>
         </Style>
        
 
