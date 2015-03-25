@@ -54,19 +54,19 @@
     <Content Include="ModelDefinition\Package_1208.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SequenceDiagram.sequencediagram">
+    <Content Include="SkriveFaellesbeskeder.sequencediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SequenceDiagram.sequencediagram.layout">
+    <Content Include="SkriveFaellesbeskeder.sequencediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>SequenceDiagram.sequencediagram</DependentUpon>
+      <DependentUpon>SkriveFaellesbeskeder.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="SystemSequenceDiagram.sequencediagram">
+    <Content Include="VaelgerVagtplan.sequencediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SystemSequenceDiagram.sequencediagram.layout">
+    <Content Include="VaelgerVagtplan.sequencediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>SystemSequenceDiagram.sequencediagram</DependentUpon>
+      <DependentUpon>VaelgerVagtplan.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UseCaseDiagram.usecasediagram">
       <SubType>Content</SubType>
