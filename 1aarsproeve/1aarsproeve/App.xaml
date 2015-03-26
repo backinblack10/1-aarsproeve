@@ -14,7 +14,7 @@
                             <Storyboard>
                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
         							Storyboard.TargetProperty="Background">
-                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#FFB81323" />
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#FFE21C2F" />
                                 </ObjectAnimationUsingKeyFrames>
                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
         							Storyboard.TargetProperty="Foreground">
@@ -26,7 +26,7 @@
                             <Storyboard>
                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
         							Storyboard.TargetProperty="Background">
-                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedBackgroundThemeBrush}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#FF8B101C" />
                                 </ObjectAnimationUsingKeyFrames>
                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
         							Storyboard.TargetProperty="Foreground">
@@ -98,8 +98,108 @@
         			StrokeDashOffset="0.5" />
             </Grid>
         </ControlTemplate>
-        
-        
+
+        <ControlTemplate x:Key="HovedButtonTemplate" TargetType="HyperlinkButton">
+            <Grid>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="PointerOver">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
+        							Storyboard.TargetProperty="BorderBrush">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#FFA0A0A0" />
+                                </ObjectAnimationUsingKeyFrames>
+                                
+
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
+        							Storyboard.TargetProperty="Opacity">
+                                    <!--<DiscreteObjectKeyFrame KeyTime="0" Value="0.8" />-->
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+        							Storyboard.TargetProperty="Foreground">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPointerOverForegroundThemeBrush}" />
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
+        							Storyboard.TargetProperty="Background">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#FF8B101C" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+        							Storyboard.TargetProperty="Foreground">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}" />
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
+        							Storyboard.TargetProperty="Background">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBackgroundThemeBrush}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
+        							Storyboard.TargetProperty="BorderBrush">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBorderThemeBrush}" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+        							Storyboard.TargetProperty="Foreground">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledForegroundThemeBrush}" />
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="Focused">
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="FocusVisualWhite"
+        							Storyboard.TargetProperty="Opacity"
+        							To="1"
+        							Duration="0" />
+                                <DoubleAnimation Storyboard.TargetName="FocusVisualBlack"
+        							Storyboard.TargetProperty="Opacity"
+        							To="1"
+        							Duration="0" />
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Unfocused" />
+                        <VisualState x:Name="PointerFocused" />
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border x:Name="Border"
+        			Background="{TemplateBinding Background}"
+        			BorderBrush="{TemplateBinding BorderBrush}"
+        			BorderThickness="{TemplateBinding BorderThickness}"
+        			Margin="3">
+                    <ContentPresenter x:Name="ContentPresenter"
+        				Content="{TemplateBinding Content}"
+        				ContentTransitions="{TemplateBinding ContentTransitions}"
+        				ContentTemplate="{TemplateBinding ContentTemplate}"
+        				Margin="{TemplateBinding Padding}"
+        				HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+        				VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+        				AutomationProperties.AccessibilityView="Raw"/>
+                </Border>
+                <Rectangle x:Name="FocusVisualWhite"
+        			IsHitTestVisible="False"
+        			Stroke="{ThemeResource FocusVisualWhiteStrokeThemeBrush}"
+        			StrokeEndLineCap="Square"
+        			StrokeDashArray="1,1"
+        			Opacity="0"
+        			StrokeDashOffset="1.5" />
+                <Rectangle x:Name="FocusVisualBlack"
+        			IsHitTestVisible="False"
+        			Stroke="{ThemeResource FocusVisualBlackStrokeThemeBrush}"
+        			StrokeEndLineCap="Square"
+        			StrokeDashArray="1,1"
+        			Opacity="0"
+        			StrokeDashOffset="0.5" />
+            </Grid>
+        </ControlTemplate>
+
+
         <Style x:Key="Top" TargetType="Grid">
             <Setter Property="Background" Value="#FFB81323"/>
         </Style>
@@ -147,7 +247,7 @@
             <Setter Property="Margin" Value="10 0 0 0"/>
             <Setter Property="Foreground" Value="Gray"/>
         </Style>
-        <Style x:Key="HovedmenuButton" TargetType="Button">
+        <Style x:Key="HovedmenuButton" TargetType="HyperlinkButton">
             <Setter Property="BorderThickness" Value="10"/>
             <Setter Property="FontSize" Value="40"/>
             <Setter Property="BorderBrush" Value="LightGray"/>

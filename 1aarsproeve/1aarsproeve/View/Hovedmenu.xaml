@@ -68,47 +68,47 @@
                     <RowDefinition Height="260"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <Button Style="{StaticResource HovedmenuButton}" ToolTipService.ToolTip="Vis vagtplan">
-                    <Button.Background>
+                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" ToolTipService.ToolTip="Vis vagtplan">
+                    <HyperlinkButton.Background>
                         <ImageBrush ImageSource="ms-appx:///Assets/vagtplan.png"/>
-                    </Button.Background>
+                    </HyperlinkButton.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.Vagtplan"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </Button>
-                <Button Style="{StaticResource HovedmenuButton}" Grid.Column="1" ToolTipService.ToolTip="Rediger profil"  >
-                    <Button.Background>
+                </HyperlinkButton>
+                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Column="1" ToolTipService.ToolTip="Rediger profil"  >
+                    <HyperlinkButton.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/profil.png"/>
-                    </Button.Background>
+                    </HyperlinkButton.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.Profil"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </Button>
-                <Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" ToolTipService.ToolTip="Skriv fællesbesked" >
-                    <Button.Background>
+                </HyperlinkButton>
+                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" ToolTipService.ToolTip="Skriv fællesbesked" >
+                    <HyperlinkButton.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/skrivbesked.png"/>
-                    </Button.Background>
+                    </HyperlinkButton.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.SkrivBesked"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </Button>
+                </HyperlinkButton>
 
-                <Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret bruger" >
-                    <Button.Background>
+                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret bruger" >
+                    <HyperlinkButton.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/opretbruger.png"/>
-                    </Button.Background>
+                    </HyperlinkButton.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.OpretBruger"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </Button>
+                </HyperlinkButton>
             </Grid>
 
             <Grid Grid.Column="1" Margin="20,0,0,0">
