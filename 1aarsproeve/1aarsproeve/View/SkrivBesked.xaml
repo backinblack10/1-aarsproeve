@@ -61,7 +61,7 @@
             <StackPanel Margin="100 0">
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Overskrift"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" Height="200" PlaceholderText="Beskrivelse"/>
-                <Button Style="{StaticResource GenerelButton}" Content="Skriv besked"/>
+                <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Skriv besked"/>
             </StackPanel>
         </Grid>
     </Grid>

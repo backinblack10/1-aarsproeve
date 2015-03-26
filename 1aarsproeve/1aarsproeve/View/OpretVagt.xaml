@@ -68,7 +68,7 @@
                     <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Sluttidspunkt" Grid.Column="1"/>
                 </Grid>
                 <ComboBox Style="{StaticResource GenerelCombobox}" PlaceholderText="Vælg ansat"/>
-                <Button Style="{StaticResource GenerelButton}" Content="Opret vagt"/>
+                <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Opret vagt"/>
             </StackPanel>
         </Grid>
     </Grid>

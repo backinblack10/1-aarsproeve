@@ -65,7 +65,7 @@
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Postnummer"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="By"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Mobil"/>
-                <Button Style="{StaticResource GenerelButton}" Content="Gem profil"/>
+                <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Gem profil"/>
             </StackPanel>
         </Grid>
     </Grid>

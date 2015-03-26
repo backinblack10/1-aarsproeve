@@ -24,36 +24,36 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-	<Grid Style="{StaticResource BilledeBaggrund}">
-		<Grid.ChildrenTransitions>
-			<TransitionCollection>
-				<EntranceThemeTransition/>
-			</TransitionCollection>
-		</Grid.ChildrenTransitions>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="140"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
+    <Grid Style="{StaticResource BilledeBaggrund}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-		<!-- Back button and page title -->
-		<Grid Style="{StaticResource Top}">
-			<Grid.ColumnDefinitions>
-				<!--<ColumnDefinition Width="120"/>-->
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
+        <!-- Back button and page title -->
+        <Grid Style="{StaticResource Top}">
+            <Grid.ColumnDefinitions>
+                <!--<ColumnDefinition Width="120"/>-->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
             <!--<Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
                         Style="{StaticResource NavigationBackButtonNormalStyle}"
                         VerticalAlignment="Top"
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>-->
-			<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}"
+            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}"
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="50,0,30,40"/>
-			<TextBlock Style="{StaticResource LoggetIndText}">
+            <TextBlock Style="{StaticResource LoggetIndText}">
 				<Run Text="Du er logget ind som: "/>
 				<Run Text="{Binding Brugernavn}" FontWeight="Bold"/>
-			</TextBlock>
-		</Grid>
+            </TextBlock>
+        </Grid>
         <Grid Margin="20 40" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1.5*"/>
