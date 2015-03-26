@@ -19,7 +19,7 @@ using _1aarsproeve.View;
 
 namespace _1aarsproeve.ViewModel
 {
-    class ViewModel
+    class VagtplanViewModel
     {
         public ApplicationDataContainer Setting { get; set; }
         public string Brugernavn { get; set; }
@@ -48,7 +48,7 @@ namespace _1aarsproeve.ViewModel
         public ICommand MineVagterCommand { get; set; }
         public ICommand LogUdCommand { get; set; }
 
-        public ViewModel()
+        public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
             Setting.Values["Brugernavn"] = "Daniel Winther";

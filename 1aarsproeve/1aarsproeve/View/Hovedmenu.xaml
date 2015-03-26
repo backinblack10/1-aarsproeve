@@ -16,7 +16,7 @@
     </Page.Resources>
 
     <Page.DataContext>
-        <ViewModel:ViewModel/>
+        <ViewModel:HovedViewModel/>
     </Page.DataContext>
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">

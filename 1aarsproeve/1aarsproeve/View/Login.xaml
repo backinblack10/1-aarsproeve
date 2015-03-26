@@ -15,7 +15,7 @@
         <x:String x:Key="AppName">Login</x:String>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:LoginViewModel/>
+        <ViewModel:BrugerViewModel/>
     </Page.DataContext>
 
     <!--

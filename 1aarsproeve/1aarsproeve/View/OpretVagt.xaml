@@ -15,7 +15,7 @@
         <x:String x:Key="AppName">Opret vagt</x:String>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:ViewModel/>
+        <ViewModel:VagtplanViewModel/>
     </Page.DataContext>
 
     <Page.BottomAppBar>

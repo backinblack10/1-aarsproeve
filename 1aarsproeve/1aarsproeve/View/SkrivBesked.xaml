@@ -15,7 +15,7 @@
         <x:String x:Key="AppName">Skriv besked</x:String>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:ViewModel/>
+        <ViewModel:HovedViewModel/>
     </Page.DataContext>
 
     <Page.BottomAppBar>

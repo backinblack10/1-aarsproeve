@@ -15,7 +15,7 @@
         <x:String x:Key="AppName">Profil</x:String>
     </Page.Resources>
     <Page.DataContext>
-        <ViewModel:ViewModel/>
+        <ViewModel:BrugerViewModel/>
     </Page.DataContext>
 
     <Page.BottomAppBar>

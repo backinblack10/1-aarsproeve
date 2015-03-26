@@ -12,14 +12,14 @@ using _1aarsproeve.View;
 
 namespace _1aarsproeve.ViewModel
 {
-    class LoginViewModel
+    class BrugerViewModel
     {
         public ApplicationDataContainer Setting { get; set; }
         public string Brugernavn { get; set; }
 
         public ICommand LogIndCommand { get; set; }
 
-        public LoginViewModel()
+        public BrugerViewModel()
         {
             LogIndCommand = new RelayCommand(LogInd);
         }

@@ -17,7 +17,7 @@
     </Page.Resources>
 
     <Page.DataContext>
-        <viewModel:ViewModel/>
+        <viewModel:VagtplanViewModel/>
     </Page.DataContext> 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
