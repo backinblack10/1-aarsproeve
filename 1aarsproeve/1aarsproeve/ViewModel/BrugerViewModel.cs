@@ -18,6 +18,7 @@ namespace _1aarsproeve.ViewModel
         public string Brugernavn { get; set; }
 
         public ICommand LogIndCommand { get; set; }
+        public ICommand LogUdCommand { get; set; }
 
         public BrugerViewModel()
         {
@@ -27,6 +28,7 @@ namespace _1aarsproeve.ViewModel
             Brugernavn = (string)Setting.Values["Brugernavn"];
 
             LogIndCommand = new RelayCommand(LogInd);
+            LogUdCommand = new RelayCommand(LogUd);
         }
 
         private void LogInd()
@@ -36,6 +38,14 @@ namespace _1aarsproeve.ViewModel
 
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Hovedmenu));
+        }
+
+        public void LogUd()
+        {
+            Setting.Values.Remove("Brugernavn");
+
+            var rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(Login));
         }
     }
 }
