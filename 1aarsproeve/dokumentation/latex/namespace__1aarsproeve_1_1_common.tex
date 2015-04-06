@@ -1,0 +1,53 @@
+\hypertarget{namespace__1aarsproeve_1_1_common}{}\section{Package \+\_\+1aarsproeve.\+Common}
+\label{namespace__1aarsproeve_1_1_common}\index{\+\_\+1aarsproeve.\+Common@{\+\_\+1aarsproeve.\+Common}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class__1aarsproeve_1_1_common_1_1_load_state_event_args}{Load\+State\+Event\+Args}
+\begin{DoxyCompactList}\small\item\em Class used to hold the event data required when a page attempts to load state. \end{DoxyCompactList}\item 
+class \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper} aids in navigation between pages. It provides commands used to navigate back and forward as well as registers for standard mouse and keyboard shortcuts used to go back and forward in Windows and the hardware back button in Windows Phone. In addition it integrates Suspension\+Manger to handle process lifetime management and state management when navigating between pages. \end{DoxyCompactList}\item 
+class \hyperlink{class__1aarsproeve_1_1_common_1_1_observable_dictionary}{Observable\+Dictionary}
+\begin{DoxyCompactList}\small\item\em Implementation of I\+Observable\+Map that supports reentrancy for use as a default view model. \end{DoxyCompactList}\item 
+class \hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command}
+\begin{DoxyCompactList}\small\item\em A command whose sole purpose is to relay its functionality to other objects by invoking delegates. The default return value for the Can\+Execute method is \textquotesingle{}true\textquotesingle{}. \hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command_a90744bca5c47a6c212fd7d0cb89182f1}{Raise\+Can\+Execute\+Changed} needs to be called whenever \hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command_a3c52d00e1d9ab7ab06cc4244b50fbee2}{Can\+Execute} is expected to return a different value. \end{DoxyCompactList}\item 
+class \hyperlink{class__1aarsproeve_1_1_common_1_1_save_state_event_args}{Save\+State\+Event\+Args}
+\begin{DoxyCompactList}\small\item\em Class used to hold the event data required when a page attempts to save state. \end{DoxyCompactList}\item 
+class {\bfseries Suspension\+Manager}
+\begin{DoxyCompactList}\small\item\em Suspension\+Manager captures global session state to simplify process lifetime management for an application. Note that session state will be automatically cleared under a variety of conditions and should only be used to store information that would be convenient to carry across sessions, but that should be discarded when an application crashes or is upgraded. \end{DoxyCompactList}\item 
+class \hyperlink{class__1aarsproeve_1_1_common_1_1_suspension_manager_exception}{Suspension\+Manager\+Exception}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \hyperlink{namespace__1aarsproeve_1_1_common_aee964a591f5ee233e54c70f38c9334cf}{Load\+State\+Event\+Handler} (object sender, \hyperlink{class__1aarsproeve_1_1_common_1_1_load_state_event_args}{Load\+State\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Represents the method that will handle the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_ab4abff9d3eb04794d05d43ff3846e344}{Navigation\+Helper.\+Load\+State}event \end{DoxyCompactList}\item 
+delegate void \hyperlink{namespace__1aarsproeve_1_1_common_acae0399935efb5f4aff5ba3cdfd92246}{Save\+State\+Event\+Handler} (object sender, \hyperlink{class__1aarsproeve_1_1_common_1_1_save_state_event_args}{Save\+State\+Event\+Args} e)
+\begin{DoxyCompactList}\small\item\em Represents the method that will handle the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a627a89278c28e536b6e7fea11da6d465}{Navigation\+Helper.\+Save\+State}event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespace__1aarsproeve_1_1_common_aee964a591f5ee233e54c70f38c9334cf}{}\index{\+\_\+1aarsproeve\+::\+Common@{\+\_\+1aarsproeve\+::\+Common}!Load\+State\+Event\+Handler@{Load\+State\+Event\+Handler}}
+\index{Load\+State\+Event\+Handler@{Load\+State\+Event\+Handler}!\+\_\+1aarsproeve\+::\+Common@{\+\_\+1aarsproeve\+::\+Common}}
+\subsubsection[{Load\+State\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}delegate void \+\_\+1aarsproeve.\+Common.\+Load\+State\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{object}]{sender, }
+\item[{{\bf Load\+State\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)}\label{namespace__1aarsproeve_1_1_common_aee964a591f5ee233e54c70f38c9334cf}
+
+
+Represents the method that will handle the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_ab4abff9d3eb04794d05d43ff3846e344}{Navigation\+Helper.\+Load\+State}event 
+
+\hypertarget{namespace__1aarsproeve_1_1_common_acae0399935efb5f4aff5ba3cdfd92246}{}\index{\+\_\+1aarsproeve\+::\+Common@{\+\_\+1aarsproeve\+::\+Common}!Save\+State\+Event\+Handler@{Save\+State\+Event\+Handler}}
+\index{Save\+State\+Event\+Handler@{Save\+State\+Event\+Handler}!\+\_\+1aarsproeve\+::\+Common@{\+\_\+1aarsproeve\+::\+Common}}
+\subsubsection[{Save\+State\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}delegate void \+\_\+1aarsproeve.\+Common.\+Save\+State\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{object}]{sender, }
+\item[{{\bf Save\+State\+Event\+Args}}]{e}
+\end{DoxyParamCaption}
+)}\label{namespace__1aarsproeve_1_1_common_acae0399935efb5f4aff5ba3cdfd92246}
+
+
+Represents the method that will handle the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a627a89278c28e536b6e7fea11da6d465}{Navigation\+Helper.\+Save\+State}event 
+

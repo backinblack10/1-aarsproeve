@@ -1,0 +1,223 @@
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper}{}\section{\+\_\+1aarsproeve.\+Common.\+Navigation\+Helper Class Reference}
+\label{class__1aarsproeve_1_1_common_1_1_navigation_helper}\index{\+\_\+1aarsproeve.\+Common.\+Navigation\+Helper@{\+\_\+1aarsproeve.\+Common.\+Navigation\+Helper}}
+
+
+\hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper} aids in navigation between pages. It provides commands used to navigate back and forward as well as registers for standard mouse and keyboard shortcuts used to go back and forward in Windows and the hardware back button in Windows Phone. In addition it integrates Suspension\+Manger to handle process lifetime management and state management when navigating between pages.  
+
+
+Inheritance diagram for \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class__1aarsproeve_1_1_common_1_1_navigation_helper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_af14c5526e239fb66aa413b026b555cdb}{Navigation\+Helper} (Page page)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper} class. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a6022d2d426e7213d412325d1b9fc05ed}{Can\+Go\+Back} ()
+\begin{DoxyCompactList}\small\item\em Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a4f5f9df95a5c10434b08d04da50a2467}{Go\+Back\+Command} property to determine if the Frame can go back. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_aaa3cbdb865a20d782eff8cd283bb8e0b}{Can\+Go\+Forward} ()
+\begin{DoxyCompactList}\small\item\em Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a9bb68ebbefcf2daaeaf8f18775eb8a80}{Go\+Forward\+Command} property to determine if the Frame can go forward. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_ac31589f6f0725544c6d6f8c409816a9c}{Go\+Back} ()
+\begin{DoxyCompactList}\small\item\em Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a4f5f9df95a5c10434b08d04da50a2467}{Go\+Back\+Command} property to invoke the Windows.\+U\+I.\+Xaml.\+Controls.\+Frame.\+Go\+Back method. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a56206b1bac5776daee0f5c79e26d4845}{Go\+Forward} ()
+\begin{DoxyCompactList}\small\item\em Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a9bb68ebbefcf2daaeaf8f18775eb8a80}{Go\+Forward\+Command} property to invoke the Windows.\+U\+I.\+Xaml.\+Controls.\+Frame.\+Go\+Forward method. \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a592295e4be4ec349fd13c6d4700e32e2}{On\+Navigated\+To} (Navigation\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Invoked when this page is about to be displayed in a Frame. This method calls \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_ab4abff9d3eb04794d05d43ff3846e344}{Load\+State}, where all page specific navigation and process lifetime management logic should be placed. \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a0919c4c25dadbd1e73ec38691a6997fe}{On\+Navigated\+From} (Navigation\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Invoked when this page will no longer be displayed in a Frame. This method calls \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a627a89278c28e536b6e7fea11da6d465}{Save\+State}, where all page specific navigation and process lifetime management logic should be placed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a4f5f9df95a5c10434b08d04da50a2467}{Go\+Back\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} used to bind to the back Button\textquotesingle{}s Command property for navigating to the most recent item in back navigation history, if a Frame manages its own navigation history. \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a9bb68ebbefcf2daaeaf8f18775eb8a80}{Go\+Forward\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} used for navigating to the most recent item in the forward navigation history, if a Frame manages its own navigation history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace__1aarsproeve_1_1_common_aee964a591f5ee233e54c70f38c9334cf}{Load\+State\+Event\+Handler} \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_ab4abff9d3eb04794d05d43ff3846e344}{Load\+State}
+\begin{DoxyCompactList}\small\item\em Register this event on the current page to populate the page with content passed during navigation as well as any saved state provided when recreating a page from a prior session. \end{DoxyCompactList}\item 
+\hyperlink{namespace__1aarsproeve_1_1_common_acae0399935efb5f4aff5ba3cdfd92246}{Save\+State\+Event\+Handler} \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a627a89278c28e536b6e7fea11da6d465}{Save\+State}
+\begin{DoxyCompactList}\small\item\em Register this event on the current page to preserve state associated with the current page in case the application is suspended or the page is discarded from the navigaqtion cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper} aids in navigation between pages. It provides commands used to navigate back and forward as well as registers for standard mouse and keyboard shortcuts used to go back and forward in Windows and the hardware back button in Windows Phone. In addition it integrates Suspension\+Manger to handle process lifetime management and state management when navigating between pages. 
+
+To make use of \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper}, follow these two steps or start with a Basic\+Page or any other Page item template other than Blank\+Page.
+
+1) Create an instance of the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper} somewhere such as in the constructor for the page and register a callback for the Load\+State and Save\+State events. 
+\begin{DoxyCode}
+\textcolor{keyword}{public} MyPage()
+\{
+    this.InitializeComponent();
+    var navigationHelper = \textcolor{keyword}{new} \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_af14c5526e239fb66aa413b026b555cdb}{NavigationHelper}(\textcolor{keyword}{this});
+    this.navigationHelper.LoadState += navigationHelper\_LoadState;
+    this.navigationHelper.SaveState += navigationHelper\_SaveState;
+\}
+
+\textcolor{keyword}{private} async \textcolor{keywordtype}{void} navigationHelper\_LoadState(\textcolor{keywordtype}{object} sender, LoadStateEventArgs e)
+\{ \}
+\textcolor{keyword}{private} async \textcolor{keywordtype}{void} navigationHelper\_SaveState(\textcolor{keywordtype}{object} sender, LoadStateEventArgs e)
+\{ \}
+\end{DoxyCode}
+
+
+2) Register the page to call into the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper} whenever the page participates in navigation by overriding the Windows.\+U\+I.\+Xaml.\+Controls.\+Page.\+On\+Navigated\+To and Windows.\+U\+I.\+Xaml.\+Controls.\+Page.\+On\+Navigated\+From events. 
+\begin{DoxyCode}
+\textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a592295e4be4ec349fd13c6d4700e32e2}{OnNavigatedTo}(NavigationEventArgs e)
+\{
+    navigationHelper.OnNavigatedTo(e);
+\}
+
+\textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a0919c4c25dadbd1e73ec38691a6997fe}{OnNavigatedFrom}(NavigationEventArgs e)
+\{
+    navigationHelper.OnNavigatedFrom(e);
+\}
+\end{DoxyCode}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_af14c5526e239fb66aa413b026b555cdb}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Navigation\+Helper@{Navigation\+Helper}}
+\index{Navigation\+Helper@{Navigation\+Helper}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Navigation\+Helper}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Navigation\+Helper (
+\begin{DoxyParamCaption}
+\item[{Page}]{page}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_af14c5526e239fb66aa413b026b555cdb}
+
+
+Initializes a new instance of the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper}{Navigation\+Helper} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page} & A reference to the current page used for navigation. This reference allows for frame manipulation and to ensure that keyboard navigation requests only occur when the page is occupying the entire window.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_a6022d2d426e7213d412325d1b9fc05ed}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Can\+Go\+Back@{Can\+Go\+Back}}
+\index{Can\+Go\+Back@{Can\+Go\+Back}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Can\+Go\+Back}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Can\+Go\+Back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_a6022d2d426e7213d412325d1b9fc05ed}
+
+
+Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a4f5f9df95a5c10434b08d04da50a2467}{Go\+Back\+Command} property to determine if the Frame can go back. 
+
+\begin{DoxyReturn}{Returns}
+true if the Frame has at least one entry in the back navigation history. 
+\end{DoxyReturn}
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_aaa3cbdb865a20d782eff8cd283bb8e0b}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Can\+Go\+Forward@{Can\+Go\+Forward}}
+\index{Can\+Go\+Forward@{Can\+Go\+Forward}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Can\+Go\+Forward}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Can\+Go\+Forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_aaa3cbdb865a20d782eff8cd283bb8e0b}
+
+
+Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a9bb68ebbefcf2daaeaf8f18775eb8a80}{Go\+Forward\+Command} property to determine if the Frame can go forward. 
+
+\begin{DoxyReturn}{Returns}
+true if the Frame has at least one entry in the forward navigation history. 
+\end{DoxyReturn}
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_ac31589f6f0725544c6d6f8c409816a9c}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Go\+Back@{Go\+Back}}
+\index{Go\+Back@{Go\+Back}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Go\+Back}]{\setlength{\rightskip}{0pt plus 5cm}virtual void \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Go\+Back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_ac31589f6f0725544c6d6f8c409816a9c}
+
+
+Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a4f5f9df95a5c10434b08d04da50a2467}{Go\+Back\+Command} property to invoke the Windows.\+U\+I.\+Xaml.\+Controls.\+Frame.\+Go\+Back method. 
+
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_a56206b1bac5776daee0f5c79e26d4845}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Go\+Forward@{Go\+Forward}}
+\index{Go\+Forward@{Go\+Forward}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Go\+Forward}]{\setlength{\rightskip}{0pt plus 5cm}virtual void \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Go\+Forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_a56206b1bac5776daee0f5c79e26d4845}
+
+
+Virtual method used by the \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a9bb68ebbefcf2daaeaf8f18775eb8a80}{Go\+Forward\+Command} property to invoke the Windows.\+U\+I.\+Xaml.\+Controls.\+Frame.\+Go\+Forward method. 
+
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_a0919c4c25dadbd1e73ec38691a6997fe}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!On\+Navigated\+From@{On\+Navigated\+From}}
+\index{On\+Navigated\+From@{On\+Navigated\+From}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{On\+Navigated\+From}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+On\+Navigated\+From (
+\begin{DoxyParamCaption}
+\item[{Navigation\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_a0919c4c25dadbd1e73ec38691a6997fe}
+
+
+Invoked when this page will no longer be displayed in a Frame. This method calls \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a627a89278c28e536b6e7fea11da6d465}{Save\+State}, where all page specific navigation and process lifetime management logic should be placed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Event data that describes how this page was reached. The Parameter property provides the group to be displayed.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_a592295e4be4ec349fd13c6d4700e32e2}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!On\+Navigated\+To@{On\+Navigated\+To}}
+\index{On\+Navigated\+To@{On\+Navigated\+To}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{On\+Navigated\+To}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+On\+Navigated\+To (
+\begin{DoxyParamCaption}
+\item[{Navigation\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_a592295e4be4ec349fd13c6d4700e32e2}
+
+
+Invoked when this page is about to be displayed in a Frame. This method calls \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_ab4abff9d3eb04794d05d43ff3846e344}{Load\+State}, where all page specific navigation and process lifetime management logic should be placed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Event data that describes how this page was reached. The Parameter property provides the group to be displayed.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_a4f5f9df95a5c10434b08d04da50a2467}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Go\+Back\+Command@{Go\+Back\+Command}}
+\index{Go\+Back\+Command@{Go\+Back\+Command}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Go\+Back\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Relay\+Command} \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Go\+Back\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_a4f5f9df95a5c10434b08d04da50a2467}
+
+
+\hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} used to bind to the back Button\textquotesingle{}s Command property for navigating to the most recent item in back navigation history, if a Frame manages its own navigation history. 
+
+The \hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} is set up to use the virtual method \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_ac31589f6f0725544c6d6f8c409816a9c}{Go\+Back} as the Execute Action and \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a6022d2d426e7213d412325d1b9fc05ed}{Can\+Go\+Back} for Can\+Execute. \hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_a9bb68ebbefcf2daaeaf8f18775eb8a80}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Go\+Forward\+Command@{Go\+Forward\+Command}}
+\index{Go\+Forward\+Command@{Go\+Forward\+Command}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Go\+Forward\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Relay\+Command} \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Go\+Forward\+Command\hspace{0.3cm}{\ttfamily [get]}}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_a9bb68ebbefcf2daaeaf8f18775eb8a80}
+
+
+\hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} used for navigating to the most recent item in the forward navigation history, if a Frame manages its own navigation history. 
+
+The \hyperlink{class__1aarsproeve_1_1_common_1_1_relay_command}{Relay\+Command} is set up to use the virtual method \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_a56206b1bac5776daee0f5c79e26d4845}{Go\+Forward} as the Execute Action and \hyperlink{class__1aarsproeve_1_1_common_1_1_navigation_helper_aaa3cbdb865a20d782eff8cd283bb8e0b}{Can\+Go\+Forward} for Can\+Execute. 
+
+\subsection{Event Documentation}
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_ab4abff9d3eb04794d05d43ff3846e344}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Load\+State@{Load\+State}}
+\index{Load\+State@{Load\+State}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Load\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Load\+State\+Event\+Handler} \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Load\+State}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_ab4abff9d3eb04794d05d43ff3846e344}
+
+
+Register this event on the current page to populate the page with content passed during navigation as well as any saved state provided when recreating a page from a prior session. 
+
+\hypertarget{class__1aarsproeve_1_1_common_1_1_navigation_helper_a627a89278c28e536b6e7fea11da6d465}{}\index{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}!Save\+State@{Save\+State}}
+\index{Save\+State@{Save\+State}!\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper@{\+\_\+1aarsproeve\+::\+Common\+::\+Navigation\+Helper}}
+\subsubsection[{Save\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Save\+State\+Event\+Handler} \+\_\+1aarsproeve.\+Common.\+Navigation\+Helper.\+Save\+State}\label{class__1aarsproeve_1_1_common_1_1_navigation_helper_a627a89278c28e536b6e7fea11da6d465}
+
+
+Register this event on the current page to preserve state associated with the current page in case the application is suspended or the page is discarded from the navigaqtion cache. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Daniel\+Winther/\+Documents/\+Git\+Hub/1-\/aarsproeve/1aarsproeve/1aarsproeve/\+Common/Navigation\+Helper.\+cs\end{DoxyCompactItemize}
