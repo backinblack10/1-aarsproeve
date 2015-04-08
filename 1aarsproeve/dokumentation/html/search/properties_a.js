@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uriparameters',['UriParameters',['../class__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model.html#a13910e263edc19222bbb60615d1f80be',1,'_1aarsproeveWebService::Areas::HelpPage::Models::HelpPageApiModel']]]
+  ['onsdag',['Onsdag',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a4d544dfd8109650066d5e9d25642c352',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['onsdagfarve',['OnsdagFarve',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a3c463aaf64f3e35e910640a29969943d',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]]
 ];

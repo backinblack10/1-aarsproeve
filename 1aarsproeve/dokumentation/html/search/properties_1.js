@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['controllername',['ControllerName',['../class__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_help_page_sample_key.html#a83d3909e7f8daf7ab92060c21afef237',1,'_1aarsproeveWebService::Areas::HelpPage::HelpPageSampleKey']]]
+  ['brugernavn',['Brugernavn',['../class__1aarsproeve_1_1_view_model_1_1_bruger_view_model.html#a63b4a8aa59a8e3e2ec0d7285c2ce6caa',1,'_1aarsproeve.ViewModel.BrugerViewModel.Brugernavn()'],['../class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#a48f0c876a1e3cd598fe3c4c7c65a760d',1,'_1aarsproeve.ViewModel.HovedViewModel.Brugernavn()'],['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a2bb8421c370d9ff0ff1776a1c239ba4e',1,'_1aarsproeve.ViewModel.VagtplanViewModel.Brugernavn()']]]
 ];

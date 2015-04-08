@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['gobackcommand',['GoBackCommand',['../class__1aarsproeve_1_1_common_1_1_navigation_helper.html#a4f5f9df95a5c10434b08d04da50a2467',1,'_1aarsproeve::Common::NavigationHelper']]],
-  ['goforwardcommand',['GoForwardCommand',['../class__1aarsproeve_1_1_common_1_1_navigation_helper.html#a9bb68ebbefcf2daaeaf8f18775eb8a80',1,'_1aarsproeve::Common::NavigationHelper']]]
+  ['errormessages',['ErrorMessages',['../class__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model.html#a89a4a8ab5f162a7feca59255edef5e50',1,'_1aarsproeveWebService::Areas::HelpPage::Models::HelpPageApiModel']]]
 ];
