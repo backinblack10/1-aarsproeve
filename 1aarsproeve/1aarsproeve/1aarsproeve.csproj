@@ -116,6 +116,7 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\BrugerViewModel.cs" />
     <Compile Include="ViewModel\HovedViewModel.cs" />
     <Compile Include="ViewModel\VagtplanViewModel.cs" />

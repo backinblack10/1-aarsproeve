@@ -157,6 +157,9 @@
           <property Id="970a5dab-5bd2-44ee-9743-243ade85ee24" name="Sluttidspunkt" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="3581112a-5aef-4a83-a0b2-fa31eae360a1" />
           </property>
+          <property Id="074f8034-4a1a-442a-b24e-f8b7ea7bb46e" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eddfb8e6-7640-46f2-94c2-395e83aa2460" />
+          </property>
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -182,6 +185,9 @@
           </property>
           <property Id="4cea05b5-3de3-4a28-9910-001ca3abce46" name="Dato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="cd4e5eae-da0f-4055-9945-b58a93983105" />
+          </property>
+          <property Id="90b4fc30-b08a-4494-98d6-fe80342c9584" name="Udløbsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0ae7459d-ed96-42bd-a391-58a8ce6a7197" />
           </property>
         </ownedAttributesInternal>
       </class>

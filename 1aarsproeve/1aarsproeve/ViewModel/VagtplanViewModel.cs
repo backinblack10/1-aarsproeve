@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -14,6 +16,7 @@ using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using _1aarsproeve.Annotations;
 using _1aarsproeve.Common;
 using _1aarsproeve.View;
 
@@ -22,7 +25,7 @@ namespace _1aarsproeve.ViewModel
     /// <summary>
     /// DataContext klasse til Views: OpretVagt, RedigerVagt, Vagtplan
     /// </summary>
-    class VagtplanViewModel
+    class VagtplanViewModel : INotifyPropertyChanged
     {
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
@@ -60,38 +63,46 @@ namespace _1aarsproeve.ViewModel
         /// Sætter søndag til bestemt farve
         /// </summary>
         public Brush SoendagFarve { get; set; }
+
         /// <summary>
         /// Ugenummer property
         /// </summary>
-        public int Ugenummer { get; set; }
+        private int _ugenummer;
+
         /// <summary>
         /// Mandag property
         /// </summary>
-        public string Mandag { get; set; }
+        private string _mandag;
+
         /// <summary>
         /// Tirsdag property
         /// </summary>
-        public string Tirsdag { get; set; }
+        private string _tirsdag;
+
         /// <summary>
         /// Onsdag property
         /// </summary>
-        public string Onsdag { get; set; }
+        private string _onsdag;
+
         /// <summary>
         /// Torsdag property
         /// </summary>
-        public string Torsdag { get; set; }
+        private string _torsdag;
+
         /// <summary>
         /// Fredag property
         /// </summary>
-        public string Fredag { get; set; }
+        private string _fredag;
+
         /// <summary>
         /// Lørdag property
         /// </summary>
-        public string Loerdag { get; set; }
+        private string _loerdag;
+
         /// <summary>
         /// Søndag property
         /// </summary>
-        public string Soendag { get; set; }
+        private string _soendag;
         /// <summary>
         /// Collection af ugedage
         /// </summary>
@@ -115,6 +126,9 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
+
+        public ICommand ForrigeUgeCommand { get; set; }
+        public ICommand NaesteUgeCommand { get; set; }
         public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
@@ -140,7 +154,52 @@ namespace _1aarsproeve.ViewModel
             FrieVagterCommand = new RelayCommand(FrieVagter);
             MineVagterCommand = new RelayCommand(MineVagter);
             LogUdCommand = new RelayCommand(LogUd);
+
+            ForrigeUgeCommand = new RelayCommand(ForrigeUge);
+            NaesteUgeCommand = new RelayCommand(NaesteUge);
         }
+
+        private void ForrigeUge()
+        {
+
+            Ugenummer = Ugenummer - 1;
+
+            if (Ugenummer == 0)
+            {
+                Ugenummer = 52;
+            }
+            Mandag = FoersteDagPaaUge(Ugenummer).ToString("D", new CultureInfo("da-DK"));
+            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("D", new CultureInfo("da-DK"));
+            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("D", new CultureInfo("da-DK"));
+            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("D", new CultureInfo("da-DK"));
+            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("D", new CultureInfo("da-DK"));
+            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("D", new CultureInfo("da-DK"));
+            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("D", new CultureInfo("da-DK"));
+
+            InitialiserAnsatte();
+        }
+
+        private void NaesteUge()
+        {
+
+            Ugenummer = Ugenummer + 1;
+
+            if (Ugenummer == 52)
+            {
+                Ugenummer = 1;
+            }
+            Mandag = FoersteDagPaaUge(Ugenummer).ToString("D", new CultureInfo("da-DK"));
+            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("D", new CultureInfo("da-DK"));
+            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("D", new CultureInfo("da-DK"));
+            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("D", new CultureInfo("da-DK"));
+            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("D", new CultureInfo("da-DK"));
+            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("D", new CultureInfo("da-DK"));
+            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("D", new CultureInfo("da-DK"));
+
+            InitialiserAnsatte();
+        }
+        
+
         /// <summary>
         /// Angiver farve på nuværende ugedag
         /// </summary>
@@ -245,51 +304,60 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void InitialiserAnsatte()
         {
-            for (int i = 0; i < UgedageCollection.Count; i++)
+            /*for (int i = 0; i < UgedageCollection.Count; i++)
             {
                 UgedageCollection[i].AnsatteListe.Clear();
 
                 UgedageCollection[i].AnsatteListe.Add(new Ansatte
                 {
                     Navn = "Daniel Winther",
-                    Tidspunkt = "16:30 - 20:30"
+                    Tidspunkt = "16:30 - 20:30",
                 });
                 UgedageCollection[i].AnsatteListe.Add(new Ansatte
                 {
                     Navn = "Benjamin Jensen",
-                    Tidspunkt = "07:00 - 16:50"
+                    Tidspunkt = "07:00 - 16:50",
                 });
                 UgedageCollection[i].AnsatteListe.Add(new Ansatte
                 {
                     Navn = "Jari Larsen",
-                    Tidspunkt = "16:00 - 19:50"
+                    Tidspunkt = "16:00 - 19:50",
                 });
                 UgedageCollection[i].AnsatteListe.Add(new Ansatte
                 {
                     Navn = "Jacob Balling",
-                    Tidspunkt = "06:00 - 14:20"
+                    Tidspunkt = "06:00 - 14:20",
                 });
                 UgedageCollection[i].AnsatteListe.Add(new Ansatte
                 {
                     Navn = "Ubemandet",
-                    Tidspunkt = "08:00 - 12:50"
+                    Tidspunkt = "08:00 - 12:50",
                 });
-            }
+            }*/
             UgedageCollection[0].AnsatteListe.Add(new Ansatte
             {
                 Navn = "Daniel Winther",
-                Tidspunkt = "16:00 - 19:50"
+                Tidspunkt = "16:00 - 19:50",
+                Ugenummer = 15
             });
             UgedageCollection[4].AnsatteListe.Add(new Ansatte
             {
                 Navn = "Ubemandet",
-                Tidspunkt = "15:00 - 18:10"
+                Tidspunkt = "15:00 - 18:10",
+                Ugenummer = 16
+            });
+            UgedageCollection[4].AnsatteListe.Add(new Ansatte
+            {
+                Navn = "Benjamin Jensen",
+                Tidspunkt = "15:00 - 18:10",
+                Ugenummer = 16
             });
             for (int i = 0; i < UgedageCollection.Count; i++)
             {
                 var query =
                     from u in UgedageCollection[i].AnsatteListe.ToList()
-                    orderby u.Tidspunkt, u.Navn ascending
+                    orderby u.Tidspunkt, u.Navn 
+                    where u.Ugenummer == Ugenummer
                     select u;
                 UgedageCollection[i].AnsatteListe.Clear();
                 foreach (var ansatte in query)
@@ -358,6 +426,100 @@ namespace _1aarsproeve.ViewModel
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Login));
         }
+
+        public string Mandag
+        {
+            get { return _mandag; }
+            set
+            {
+                _mandag = value;
+                OnPropertyChanged("Mandag");
+            }
+        }
+
+        public string Tirsdag
+        {
+            get { return _tirsdag; }
+            set
+            {
+                _tirsdag = value;
+                OnPropertyChanged("Tirsdag");
+            }
+        }
+
+        public string Onsdag
+        {
+            get { return _onsdag; }
+            set
+            {
+                _onsdag = value;
+                OnPropertyChanged("Onsdag");
+            }
+        }
+
+        public string Torsdag
+        {
+            get { return _torsdag; }
+            set
+            {
+                _torsdag = value;
+                OnPropertyChanged("Torsdag");
+            }
+        }
+
+        public string Fredag
+        {
+            get { return _fredag; }
+            set
+            {
+                _fredag = value;
+                OnPropertyChanged("Fredag");
+            }
+        }
+
+        public string Loerdag
+        {
+            get { return _loerdag; }
+            set
+            {
+                _loerdag = value;
+                OnPropertyChanged("Loerdag");
+            }
+        }
+
+        public string Soendag
+        {
+            get { return _soendag; }
+            set
+            {
+                _soendag = value;
+                OnPropertyChanged("Soendag");
+            }
+        }
+
+        public int Ugenummer
+        {
+            get { return _ugenummer; }
+            set
+            {
+                _ugenummer = value;
+                OnPropertyChanged("Ugenummer");
+            }
+        }
+
+        #region PropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+
     }
     #region Forsøgsklasser
     internal class Ugedage
@@ -370,6 +532,7 @@ namespace _1aarsproeve.ViewModel
     {
         public string Navn { get; set; }
         public string Tidspunkt { get; set; }
+        public int Ugenummer { get; set; }
     }
     #endregion
 }

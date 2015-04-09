@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" name="DesignClassDiagram" linkedPackageId="9467ccdf-342a-4c08-8a33-291cddcedd79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" name="DesignClassDiagram" linkedPackageId="9467ccdf-342a-4c08-8a33-291cddcedd79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="07392d45-5266-4b35-a375-9fb16f508317" name="View">
@@ -666,6 +666,12 @@
                     <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
                   </type_NamedElement>
                 </property>
+                <property Id="bb8e7a9d-4087-40ee-ad48-d28cdc0b354d" name="Udloebsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3d4f836f-3f45-45c3-8df9-c343fa6e32a5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d61fa113-3b2e-4404-9bc3-38192fa62170" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
@@ -772,6 +778,12 @@
                 </property>
                 <property Id="eae09aeb-d285-4565-ab0d-451daee8c83c" name="Sluttidspunkt" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="a01af9d2-2f3b-4a49-a8ea-b7102248db92" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+                <property Id="c151020b-e18a-470b-abe5-88e66892ebd5" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="762fde88-2c67-47c2-88e8-5092609b901f" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
                   </type_NamedElement>

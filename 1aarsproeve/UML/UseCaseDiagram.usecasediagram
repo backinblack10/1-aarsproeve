@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="eefe1b95-ce1b-4f9a-880d-5ffe86b45a1f" name="Bruger" isAbstract="false" isLeaf="false">
@@ -84,6 +84,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="bf93b260-a921-4470-b596-7299d27e9be7" />
+          </association>
+          <association Id="23cbd056-e0b1-4bb0-88f9-80e3694e1d29" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Naviger en uge frem/tilbage" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="270f657d-dd49-42a6-b8af-d5f416304334" LastKnownName="Naviger en uge frem/tilbage" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="489f5d2a-0c5a-47f8-b5be-be6d16705397" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c6da01a7-3b15-49fc-a2ca-1c9c7b3cb2d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="87b8ffa3-1b75-4f4d-b4b9-55dd07a07be6" name="Naviger en uge frem/tilbage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="efea621f-d828-4db5-8bd6-73e7cc9e148c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7442dbb5-98ee-4ff1-8a31-80f8a4cda472" />
           </association>
         </targetEnds>
       </actor>
@@ -220,6 +236,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="eae44551-d756-441d-a552-0e1f5f28d02a" />
           </association>
+          <association Id="d15ef7bf-8181-42c6-8222-044e099a649a" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Naviger en uge frem/tilbage" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="270f657d-dd49-42a6-b8af-d5f416304334" LastKnownName="Naviger en uge frem/tilbage" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a4755776-80fa-4f52-aebe-39166125b7e1" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ed6ee90b-3452-4097-8d3f-a048612958c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbfe9b5d-991b-4d70-aacc-4c7888746b7a" name="Naviger en uge frem/tilbage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="502ee7d6-fced-4034-8957-d180ca002267" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b3295282-2253-4f85-bc62-7edb838a6740" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -290,6 +322,11 @@
     <useCaseModelRootHasTypes>
       <useCase Id="75447552-c088-463f-a96f-12b6cfd1e20e" name="Logger ud på app" isAbstract="false" isLeaf="false">
         <elementDefinition Id="bbfe0116-dfe0-4957-9ef3-d892b01b3f1f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="270f657d-dd49-42a6-b8af-d5f416304334" name="Naviger en uge frem/tilbage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b6f54fc8-a275-41d0-a463-cda6510bbe8d" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

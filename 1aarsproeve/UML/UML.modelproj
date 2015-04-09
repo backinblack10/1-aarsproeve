@@ -75,6 +75,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UseCaseDiagram.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="TilfoejVagtSD.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TilfoejVagtSD.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>TilfoejVagtSD.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\UML.uml">
       <SubType>Content</SubType>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -210,6 +210,45 @@
                 <memberEnd
                   Id="ccd3155e-43ec-405b-904c-272e938ace7a"
                   name="Logger ud på app"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7442dbb5-98ee-4ff1-8a31-80f8a4cda472"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Naviger en uge frem/tilbage"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b6f54fc8-a275-41d0-a463-cda6510bbe8d"
+              LastKnownName="Naviger en uge frem/tilbage"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6da01a7-3b15-49fc-a2ca-1c9c7b3cb2d3"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="efea621f-d828-4db5-8bd6-73e7cc9e148c"
+                  name="Naviger en uge frem/tilbage"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -532,6 +571,45 @@
                 <memberEnd
                   Id="5d60defd-75c6-476f-b3fa-04048f11a671"
                   name="Logger ud på app"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b3295282-2253-4f85-bc62-7edb838a6740"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Naviger en uge frem/tilbage"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b6f54fc8-a275-41d0-a463-cda6510bbe8d"
+              LastKnownName="Naviger en uge frem/tilbage"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed6ee90b-3452-4097-8d3f-a048612958c3"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="502ee7d6-fced-4034-8957-d180ca002267"
+                  name="Naviger en uge frem/tilbage"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -995,6 +1073,17 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="eddfb8e6-7640-46f2-94c2-395e83aa2460"
+            name="Ugenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -1053,6 +1142,17 @@
           <property
             Id="cd4e5eae-da0f-4055-9945-b58a93983105"
             name="Dato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0ae7459d-ed96-42bd-a391-58a8ce6a7197"
+            name="Udløbsdato"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2026,22 +2126,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="9ce5b411-cbc4-4760-ad6b-50fcecf4a3a0"
-            name="MessageOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="3529e96c-e7f1-4cac-a021-5ec2d895681f"
-                LastKnownName="System"
-                LastKnownLocation="UML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="7a177cd4-2d6e-4323-81d1-4adcf1974e50"
             name="MessageOccurrenceSpecification5">
             <covered>
               <lifelineMoniker
                 Id="49264d17-f762-4f83-b013-ceed5f3d176d"
                 LastKnownName="Administrator"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9ce5b411-cbc4-4760-ad6b-50fcecf4a3a0"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="3529e96c-e7f1-4cac-a021-5ec2d895681f"
+                LastKnownName="System"
                 LastKnownLocation="UML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2384,6 +2484,374 @@
     <packageHasNamedElement>
       <executionEvent
         Id="bc13d4f1-fb8b-437f-aaea-699cf110c382"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="b482cfc3-1f4b-4239-8ba7-d88157b092bb"
+        name="TilfoejVagtSD"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="3203f4e6-9e46-4a00-ae11-b3d4096f1d4e"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+                LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2fb91be6-6c97-403f-a9e0-314cc20a5dca"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="92eb531a-b38d-4281-b7cc-283da0da2660"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c450bc82-26ad-4bfa-abd3-4c43ffa0413c"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2540194d-d4b5-42a3-b2f1-3f47d2b698d6"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="468ee44c-6c32-4286-8817-6e08369d146e"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="92eb531a-b38d-4281-b7cc-283da0da2660"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="171b4fef-370a-4cf6-8e56-68a207de24cc"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+                LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="43598f86-15d1-4688-b9a7-0aeafef64768"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="effa1260-eb06-4fac-b49b-7030491a8f1e"
+                LastKnownName="Bruger"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c450bc82-26ad-4bfa-abd3-4c43ffa0413c"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+                LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0d202150-e102-44c7-b6ae-25fbf898f0d5"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="8d606198-6797-427d-8421-9b80434d084b"
+                LastKnownName=": Vagt"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a4fe249f-abcf-462d-84d2-6f0763438b31"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a1656977-7381-4209-89d2-8b491b88daff"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6ab0ff02-0cda-4f93-93e7-4a3982b7beb2"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="254f879c-0cc7-4602-8a0a-8fffdb2fce86"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a1656977-7381-4209-89d2-8b491b88daff"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7eb0c374-680c-403c-860a-9922f7694ecb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8d606198-6797-427d-8421-9b80434d084b"
+                LastKnownName=": Vagt"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2540194d-d4b5-42a3-b2f1-3f47d2b698d6"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+                LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6ab0ff02-0cda-4f93-93e7-4a3982b7beb2"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="8d606198-6797-427d-8421-9b80434d084b"
+                LastKnownName=": Vagt"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="254f879c-0cc7-4602-8a0a-8fffdb2fce86"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="8d606198-6797-427d-8421-9b80434d084b"
+                LastKnownName=": Vagt"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="468ee44c-6c32-4286-8817-6e08369d146e"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+                LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a4fe249f-abcf-462d-84d2-6f0763438b31"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="dd7e90e6-2941-4699-8747-fdb61a8928e8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="8d606198-6797-427d-8421-9b80434d084b"
+                LastKnownName=": Vagt"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2fb91be6-6c97-403f-a9e0-314cc20a5dca"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ddfb5620-302e-4c90-9916-d553e7393cd6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+                LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="effa1260-eb06-4fac-b49b-7030491a8f1e"
+            name="Bruger"
+            isActor="true"
+            lifelineDisplayName="Bruger">
+            <represents>
+              <propertyMoniker
+                Id="6d4807c1-9215-46b6-b8e8-f3f40107fabc"
+                LastKnownLocation="UML.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="43598f86-15d1-4688-b9a7-0aeafef64768"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+            name=": VagtHandler"
+            isActor="false"
+            lifelineDisplayName=": VagtHandler">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="92eb531a-b38d-4281-b7cc-283da0da2660"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2fb91be6-6c97-403f-a9e0-314cc20a5dca"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="8d606198-6797-427d-8421-9b80434d084b"
+            name=": Vagt"
+            isActor="false"
+            lifelineDisplayName=": Vagt">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="a1656977-7381-4209-89d2-8b491b88daff"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a4fe249f-abcf-462d-84d2-6f0763438b31"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="00ee00d4-92af-4757-8516-89b5b4ea6307"
+            name="OpretVagt(starttidspunkt, sluttidspunkt, ugenummer, ansat)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="43598f86-15d1-4688-b9a7-0aeafef64768"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c450bc82-26ad-4bfa-abd3-4c43ffa0413c"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="04bed803-6a2d-48f8-bbd3-6d7eacf7ff6c"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2540194d-d4b5-42a3-b2f1-3f47d2b698d6"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6ab0ff02-0cda-4f93-93e7-4a3982b7beb2"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fce00e42-67eb-4545-aea3-663a34394777"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="254f879c-0cc7-4602-8a0a-8fffdb2fce86"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="468ee44c-6c32-4286-8817-6e08369d146e"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="6d4807c1-9215-46b6-b8e8-f3f40107fabc"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="82a6cbc4-25ee-46f4-b121-5638b877aa5a"
+                LastKnownName="Bruger"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b6f54fc8-a275-41d0-a463-cda6510bbe8d"
+        name="Naviger en uge frem/tilbage"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="171b4fef-370a-4cf6-8e56-68a207de24cc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ddfb5620-302e-4c90-9916-d553e7393cd6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7eb0c374-680c-403c-860a-9922f7694ecb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="dd7e90e6-2941-4699-8747-fdb61a8928e8"
         name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
